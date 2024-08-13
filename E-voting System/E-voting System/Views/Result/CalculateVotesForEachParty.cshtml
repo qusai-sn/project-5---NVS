@@ -1,0 +1,136 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@{
+    var partyResultsString = Request.Cookies["PartyResults"]?.Value;
+    var totalVotesAboveThreshold = Request.Cookies["TotalVotesAboveThreshold"]?.Value;
+    var totalParticipants = Request.Cookies["TotalParticipants"]?.Value;
+    var totalWhitePartyVotes = Request.Cookies["TotalWhitePartyVotes"]?.Value;
+    var threshold = Request.Cookies["Threshold"]?.Value;
+
+    // Prepare the party seats dictionary
+    var partySeats = new Dictionary<string, int>();
+    foreach (var cookie in Request.Cookies.AllKeys)
+    {
+        if (cookie.StartsWith("Seats_"))
+        {
+            var partyName = cookie.Substring(6); // Extract party name
+            var seatValue = Request.Cookies[cookie]?.Value;
+            if (int.TryParse(seatValue, out var seats))
+            {
+                partySeats[partyName] = seats;
+            }
+        }
+    }
+
+    // Prepare the party candidates dictionary
+    var partyCandidates = ViewBag.PartyCandidates as Dictionary<string, List<string>> ?? new Dictionary<string, List<string>>();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Party Vote Results</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/site.css" />
+    <style>
+       
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensure no overflow from cards */
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin: 10px;
+            padding: 15px;
+            width: calc(33% - 20px); /* Three cards per row */
+            float: left;
+            box-sizing: border-box;
+            min-height: 150px; /* Ensure cards have enough height */
+        }
+
+            .card h3 {
+                margin-top: 0;
+                font-size: 18px;
+                color: #007bff;
+            }
+
+            .card p {
+                margin: 5px 0;
+            }
+
+            .card ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .card ul li {
+                    padding: 5px 0;
+                    border-bottom: 1px solid #ddd;
+                }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Party Vote Results</h1>
+
+        <!-- Display threshold, total participants, and white party votes -->
+        <h2>Election Statistics</h2>
+        <p><strong>Threshold:</strong> @threshold</p>
+        <p><strong>Total Participants:</strong> @totalParticipants</p>
+        <p><strong>Total White Party Votes:</strong> @totalWhitePartyVotes</p>
+
+
+
+        <!-- Display party seats and candidates in cards -->
+        <h2>Party Seats and Candidates</h2>
+        <div class="clear">
+            @foreach (var partyName in partySeats.Keys)
+            {
+                var seatCount = partySeats[partyName];
+                var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
+
+                if (candidates.Any())
+                {
+                    <div class="card">
+                        <h3>@partyName</h3>
+                        <p><strong>Seats:</strong> @seatCount</p>
+                        <p><strong>Candidates:</strong></p>
+                        <ul>
+                            @foreach (var candidate in candidates)
+                            {
+                                <li>@candidate</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

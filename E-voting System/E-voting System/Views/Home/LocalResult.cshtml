@@ -1,0 +1,99 @@
+﻿@model List<E_voting_System.Models.CircleViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Local Voting Results";
+}
+
+<section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container advertisement_Card">
+        <h1 class="text-center mb-5">نتائج التصويت المحلية</h1>
+        <div class="row">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border">
+                        <div class="card-body">
+                            <h3 class="card-title">الدائرة @(i + 1)</h3>
+                             
+                           
+
+                            <h4>القوائم الفائزة</h4>
+                            @if (Model[i].winning_lists.Any())
+                            {
+                                <ul class="list-group">
+                                    @foreach (var list in Model[i].winning_lists.Where(l => l.ActualSeats > 0))
+                                    {
+                                        <li class="list-group-item active custom-bg text-white">@list.list_Name - @list.Counter (المقاعد: @list.ActualSeats)</li>
+                                        if (Model[i].winningCandidates.ContainsKey(list.ID))
+                                        {
+                                            foreach (var candidate in Model[i].winningCandidates[list.ID])
+                                            {
+                                                <li class="list-group-item">@candidate.Candidate_Name </li>
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p>لا توجد قوائم فائزة</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .advertisement_Card {
+        width: 100%;
+        margin: auto;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        margin: 5px 0;
+    }
+
+    .list-group-item.active.custom-bg {
+        background-color: #ff4c4c; /* Use the color from the button in your image */
+        color: #fff;
+        border-color: #ff4c4c;
+    }
+
+    .list-group-item {
+        border: none;
+        padding: 5px 0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    h4 {
+        margin-top: 20px;
+        color: #555;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,119 @@
+﻿
+@model E_voting_System.Models.PartyList
+
+
+
+<section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container advertisement_Card">
+
+        @using (Html.BeginForm("partyApplication", "Candidates", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-container"  style="direction:rtl;">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <fieldset>
+                    <legend>تفاصيل القائمة الحزبية</legend>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Party_Name, "اسم الحزب", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.Party_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Party_Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.List_Name, "اسم القائمة", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.List_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.List_Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Delegate_ID, "رقم هوية المفوض", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.Delegate_ID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Delegate_ID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Delegate_Name, "اسم المفوض", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.Delegate_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Delegate_Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Delegate_Phone, "رقم هاتف المفوض", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.Delegate_Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Delegate_Phone, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Delegate_Email, "البريد الإلكتروني للمفوض", htmlAttributes: new { @class = "form-label" })
+                        @Html.EditorFor(model => model.Delegate_Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Delegate_Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ListLogo" class="form-label">شعار القائمة</label>
+                        <input type="file" id="ListLogo" name="ListLogo" class="form-control" />
+                    </div>
+                </fieldset>
+
+                <div class="advertisement_button">
+                    <input type="submit" value="حفظ القائمة" class="btn btn-primary" />
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@*<div class="text-center">
+        @Html.ActionLink("العودة إلى القائمة", "Index", null, new { @class = "btn btn-secondary" })
+    </div>*@
+
+
+
+<style>
+    .advertisement_button {
+        margin: auto;
+        text-align: center;
+    }
+
+    .advertisement_Card {
+        width: 80%;
+        margin: auto;
+    }
+
+    .form-container {
+        border: 2px solid #ccc;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .form-container legend {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: none;
+            background: white;
+            padding: 0 10px;
+        }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>

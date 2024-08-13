@@ -1,0 +1,232 @@
+﻿
+@{
+    ViewBag.Title = "موجز الأخبار";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // تأكد من وجود ملف التخطيط
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css">
+
+<h2 class="text-center my-4">موجز الأخبار</h2>
+
+<div class="container d-flex justify-content-center">
+    <div class="col-12 col-md-4">
+        @{
+            var combinedList = new List<dynamic>();
+            combinedList.AddRange(ViewBag.Posts);
+            combinedList.AddRange(ViewBag.Ads);
+            combinedList = combinedList.OrderByDescending(item => item.CreatedAt).ToList(); // Adjust sorting logic as needed
+        }
+
+        @if (combinedList.Count > 0)
+        {
+            foreach (var item in combinedList)
+            {
+                if (item.GetType().GetProperty("Title") != null) // It's a post
+                {
+                    <section>
+                        <div class="card mb-3" style="max-width: 42rem">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <a href="">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/archive/c/c0/20220609031625%21Flag_of_Jordan.svg" class="border rounded-circle me-2" alt="Avatar" style="height: 40px" />
+                                    </a>
+                                    <div>
+                                        <a href="" class="text-dark mb-0">
+                                            <strong>@item.Title</strong>
+                                        </a>
+                                        <a href="" class="text-muted d-block" style="margin-top: -6px">
+                                            <small>@item.CreatedAt.ToString("yyyy-MM-dd")</small>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>@item.Content</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between text-center border-top border-bottom mb-4">
+                                    <button type="button" class="btn btn-link btn-lg like-button" onclick="toggleLike(this, '@item.ID', 'post')">
+                                        <i class="fas fa-thumbs-up me-2"></i><span class="like-count">@item.LikeCount</span> إعجاب
+                                    </button>
+                                    <button type="button" class="btn btn-link btn-lg" onclick="shareToFacebook('@item.Title')">
+                                        <i class="fas fa-share me-2"></i>مشاركة
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                }
+                else if (item.GetType().GetProperty("Name") != null) // It's an ad
+                {
+                    <section>
+                        <div class="card mb-3" style="max-width: 42rem">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <a href="">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/archive/c/c0/20220609031625%21Flag_of_Jordan.svg" class="border rounded-circle me-2" alt="Avatar" style="height: 40px" />
+                                    </a>
+                                    <div>
+                                        <a href="" class="text-dark mb-0">
+                                            <strong>@item.Name</strong>
+                                        </a>
+                                        <a href="" class="text-muted d-block" style="margin-top: -6px">
+                                            <small>@item.CreatedAt.ToString("yyyy-MM-dd")</small>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.URL))
+                            {
+                                string embedUrl = GetYouTubeEmbedUrl(item.URL);
+                                <div class="bg-image hover-overlay ripple rounded-0 custom-ratio" data-mdb-ripple-color="light">
+                                    <iframe src="@embedUrl" title="YouTube video" allowfullscreen></iframe>
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                    </a>
+                                </div>
+                            }
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between text-center border-top border-bottom mb-4">
+                                    <button type="button" class="btn btn-link btn-lg like-button" onclick="toggleLike(this, '@item.ID', 'ad')">
+                                        <i class="fas fa-thumbs-up me-2"></i><span class="like-count">@item.LikeCount</span> إعجاب
+                                    </button>
+                                    <button type="button" class="btn btn-link btn-lg" onclick="shareToFacebook('@item.URL')">
+                                        <i class="fas fa-share me-2"></i>مشاركة
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                }
+            }
+        }
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Load like counts from local storage
+        document.querySelectorAll('.card').forEach(function (item) {
+            const id = item.querySelector('.like-button').getAttribute('onclick').split(',')[1].trim().replace(/'/g, '');
+            const likeCountElement = item.querySelector('.like-count');
+            const likeButton = item.querySelector('.like-button');
+            const likeData = JSON.parse(localStorage.getItem('like-' + id));
+
+            if (likeData) {
+                likeCountElement.innerText = likeData.count;
+                if (likeData.liked) {
+                    likeButton.classList.add('text-primary');
+                }
+            }
+        });
+    });
+
+    function shareToFacebook(url) {
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        window.open(shareUrl, 'facebook-share-dialog', 'width=800,height=600');
+        return false;
+    }
+
+    function toggleLike(element, id, type) {
+        const likeCountElement = element.querySelector('.like-count');
+        let likeCount = parseInt(likeCountElement.innerText) || 120; // Initialize like count to 120 if NaN
+        const likeData = JSON.parse(localStorage.getItem('like-' + id)) || { count: likeCount, liked: false };
+
+        if (!likeData.liked) {
+            likeCount++;
+            likeData.liked = true;
+            element.classList.add('text-primary');
+        } else {
+            likeCount--;
+            likeData.liked = false;
+            element.classList.remove('text-primary');
+        }
+
+        likeCountElement.innerText = likeCount;
+        likeData.count = likeCount;
+
+        // Save like count to local storage
+        localStorage.setItem('like-' + id, JSON.stringify(likeData));
+
+        // Send like/unlike action to server
+        $.post('@Url.Action("UpdateLikes")', { id: id, type: type, increment: likeData.liked }, function (data) {
+            if (data.success) {
+                likeCountElement.innerText = data.likeCount;
+            }
+        });
+    }
+</script>
+
+@functions {
+    public string GetYouTubeEmbedUrl(string url)
+    {
+        var uri = new Uri(url);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        var videoId = query["v"];
+        if (string.IsNullOrEmpty(videoId))
+        {
+            return url; // Return the original URL if it is not a YouTube link
+        }
+        return $"https://www.youtube.com/embed/{videoId}";
+    }
+}
+
+<style>
+    body {
+        margin-top: 20px;
+        color: #6c7293;
+    }
+
+    .profile-navbar .nav-item .nav-link {
+        color: #6c7293;
+    }
+
+        .profile-navbar .nav-item .nav-link.active {
+            color: #464dee;
+        }
+
+        .profile-navbar .nav-item .nav-link i {
+            font-size: 1.25rem;
+        }
+
+    .profile-feed-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .img-sm {
+        width: 43px;
+        height: 43px;
+    }
+
+    .like-button {
+        cursor: pointer;
+        color: inherit; /* Use the same color as the rest of the text */
+        text-decoration: none; /* Remove underline from the like word */
+    }
+
+        .like-button.text-primary {
+            color: #007bff !important; /* Make the like button text primary color */
+        }
+
+    .custom-ratio {
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        position: relative;
+    }
+
+        .custom-ratio iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+</style>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<E_voting_System.Models.ContactForm>
+@{
+
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+
+                @Html.ActionLink("Reply", "Reply", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+@if (TempData["AlertMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: '@TempData["AlertType"]',
+            title: '@TempData["AlertMessage"]',
+            showConfirmButton: true
+        });
+    </script>
+}

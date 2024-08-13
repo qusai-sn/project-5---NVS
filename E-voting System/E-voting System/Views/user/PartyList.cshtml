@@ -1,0 +1,111 @@
+﻿@model E_voting_System.Models.PartyListViewModel
+
+@{
+    ViewBag.Title = "Party List";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 10px;
+            margin: 0 auto; /* Center the cards */
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .form-check-input {
+            margin-top: 0.3em;
+        }
+
+        .btn-primary {
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            text-align: center;
+        }
+
+        .form-check-label {
+            margin-left: 10px;
+        }
+
+        .container {
+            max-width: 800px; /* Limit the container width */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center my-4">Party List</h2>
+
+        @using (Html.BeginForm("PartyList", "user", FormMethod.Post, new { id = "partyListForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row justify-content-center">
+                @foreach (var party in Model.PartyLists)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@party.Party_Name</h5>
+                                <div class="form-check text-center mt-3">
+                                    <input class="form-check-input" type="radio" name="SelectedPartyId" id="party_@party.ID" value="@party.ID" />
+                                    <label class="form-check-label" for="party_@party.ID">
+                                        Select
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="form-group mt-4">
+                <input type="button" id="submitPartyVote" value="Submit Vote" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('submitPartyVote').addEventListener('click', function () {
+                var selectedParty = document.querySelector('input[name="SelectedPartyId"]:checked');
+                if (!selectedParty) {
+                    Swal.fire({
+                        title: 'Confirm White Vote',
+                        text: "You are about to submit a white vote. Do you want to proceed?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonText: 'Yes, submit',
+                        cancelButtonText: 'No, cancel'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            document.getElementById('partyListForm').submit();
+                        }
+                    });
+                } else {
+                    document.getElementById('partyListForm').submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "تطبيق مرشحي القائمة الحزبية";
+}
+
+<section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container advertisement_Card">
+        <h2>تطبيق مرشحي القائمة الحزبية</h2>
+
+        @using (Html.BeginForm("PartycandidatesAPP", "Candidates", FormMethod.Post, new { enctype = "multipart/form-data", id = "partyCandidatesForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-container">
+                <!-- تحميل ملف Excel للمرشحين -->
+                <div class="form-group">
+                    <label for="CandidatesExcelFile" class="form-label">تحميل ملف Excel للمرشحين</label>
+                    <input type="file" name="CandidatesExcelFile" class="form-control" />
+                </div>
+
+                <div class="advertisement_button">
+                    <button type="submit" class="btn btn-primary">تقديم</button>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>document.getElementById('partyCandidatesForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Use SweetAlert to show a confirmation message
+            Swal.fire({
+                title: 'هل أنت متأكد؟',
+                text: "تأكد من صحة ملف Excel قبل الإرسال.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'نعم، أرسل!',
+                cancelButtonText: 'إلغاء'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If confirmed, submit the form
+                    document.getElementById('partyCandidatesForm').submit();
+                }
+            });
+        });
+        Swal.fire({
+            title: 'تم التقديم!',
+            text: 'تم تقديم بيانات المترشحين بنجاح.',
+            icon: 'success',
+            confirmButtonText: 'حسنًا'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('candidateForm').submit();
+            }
+        });</script>
+}
+
+<style>
+    .advertisement_button {
+        margin: auto;
+        text-align: center;
+    }
+
+    .advertisement_Card {
+        width: 60%;
+        margin: auto;
+    }
+
+    .form-container {
+        border: 2px solid #ccc;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>

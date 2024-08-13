@@ -1,0 +1,67 @@
+﻿@model E_voting_System.Models.USER
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<style>
+
+    .loggin_button {
+        margin: auto;
+        text-align: center;
+    }
+
+    .loggin_Card {
+        width: 45%
+    }
+</style>
+<!-- Login Section ====================== -->
+<section class="section-login pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container loggin_Card">
+        <div class="login-form-wrapper bg-custom-light p-4 p-lg-40 shadow rounded">
+            <h2 class="mb-30 mb-lg-40 text-lg-center wow fadeInUp">Login</h2>
+
+            @using (Html.BeginForm("Login", "user", FormMethod.Post, new { id = "loginForm", @class = "login-form row g-30 wow slideInUp" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="col-md-12 mb-3">
+                    <label for="National_ID" class="form-label">National ID</label>
+                    @Html.EditorFor(model => model.National_ID, new { htmlAttributes = new { @class = "form-control", id = "National_ID", required = "" } })
+                    @Html.ValidationMessageFor(model => model.National_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-12 mt-4 loggin_button">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+                <div class="response py-1"></div>
+            }
+        </div>
+        <!-- login-form-wrapper -->
+    </div>
+    <!-- container -->
+</section>
+<!-- Login Section ====================== -->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').on('submit', function (e) {
+                e.preventDefault();
+                // Add any additional client-side validation or AJAX form submission logic here
+                var isValid = true;
+                if ($('#National_ID').val().trim() === '') {
+                    $('#National_ID').addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    $('#National_ID').removeClass('is-invalid');
+                }
+
+                if (isValid) {
+                    this.submit();
+                }
+            });
+        });
+    </script>
+}

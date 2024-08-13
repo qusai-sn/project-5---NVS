@@ -1,0 +1,144 @@
+﻿ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVS- Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #343a40;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 1.5rem;
+            }
+
+            .sidebar a {
+                color: #fff;
+                padding: 15px;
+                text-decoration: none;
+                display: block;
+                font-size: 1rem;
+                transition: background 0.3s, color 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background: #495057;
+                    color: #ffd700;
+                }
+
+            .sidebar .active {
+                background: #007bff;
+            }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #f8f9fa;
+            overflow-y: auto;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+            background: #007bff;
+            color: #fff;
+        }
+
+            .navbar .navbar-brand {
+                color: #fff;
+            }
+
+            .navbar .navbar-nav .nav-link {
+                color: #fff;
+                transition: color 0.3s;
+            }
+
+                .navbar .navbar-nav .nav-link:hover {
+                    color: #ffd700;
+                }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+            }
+
+            .card h5 {
+                font-size: 1.2rem;
+            }
+
+            .card .card-text {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <a href="@Url.Action("Index", "Home")" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="@Url.Action("Index1", "Debates")"><i class="fas fa-comments"></i> Debates Requests</a>
+        <a href="@Url.Action("Lists", "Admin")"><i class="fas fa-user-plus"></i> Nominate Requests</a>
+        <a href="@Url.Action("AdminAds", "Ads")"><i class="fas fa-ad"></i> Ads Requests</a>
+        <a href="@Url.Action("Index", "AdminPosts")"><i class="fas fa-edit"></i> Admin Post</a>
+        <a href="@Url.Action("DateSet", "ElectionDate")"><i class="fas fa-calendar-alt"></i> Set Dates</a>
+        <a href="@Url.Action("LocalResult", "Result")"><i class="fas fa-map-marker-alt"></i> Local Results</a>
+        <a href="@Url.Action("CalculateVotesForEachParty", "Result")"><i class="fas fa-flag"></i> Party Results</a>
+        <a href="@Url.Action("Logout", "Home")"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">@ViewBag.Title</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+        </nav>
+
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        <footer class="footer">
+            &copy; 2024 Admin Dashboard. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

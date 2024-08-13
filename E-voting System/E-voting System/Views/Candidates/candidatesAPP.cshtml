@@ -1,0 +1,166 @@
+﻿
+@model IEnumerable<E_voting_System.Models.localCandidate>
+
+
+@{
+    ViewBag.Title = "تطبيق المترشحين";
+    var number = ViewBag.number;
+    var x = Convert.ToInt32(Session["count"].ToString());
+    var circlename = ViewBag.CircleName;
+}
+
+<section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container advertisement_Card">
+        <h2 class="text-center">تطبيق المترشحين</h2>
+
+        @using (Html.BeginForm("candidatesAPP", "Candidates", FormMethod.Post, new { id = "candidateForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-container">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <!-- Hidden dropdown for circle selection -->
+                <select id="hiddenCircleSelect" class="d-none">
+                    <!-- Options will be populated here if needed -->
+                </select>
+
+                <div id="candidateSection">
+                    @for (int i = 0; i < x; i++)
+                    {
+                        <fieldset class="candidate-fieldset">
+                            <legend>مترشح @(i + 1)</legend>
+
+                            <div class="form-group">
+                                <label for="candidateID_@i" class="form-label">الرقم الوطني</label>
+                                <input type="text" name="candidated[@i].National_ID" id="candidateID_@i" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="candidateName_@i" class="form-label">اسم المترشح</label>
+                                <input type="text" name="candidated[@i].Candidate_Name" id="candidateName_@i" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ChairType_@i" class="form-label">نوع المقعد</label>
+                                <select name="candidated[@i].Type_Of_Chair" class="form-select ChairType" id="ChairType_@i">
+                                    <!-- Options will be populated here by JavaScript -->
+                                </select>
+                            </div>
+
+                        </fieldset>
+                    }
+                </div>
+
+                <div class="advertisement_button">
+                    <input type="button" value="حفظ المترشحين" class="btn btn-primary" onclick="submitForm()" />
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Define circle options and chair types
+            var chairOptions = {
+                'Circle 1': ['رقم وطني', 'كوتا'],
+                'Circle 2': ['رقم وطني', 'كوتا', 'مسيحي'],
+                'Circle 3': ['رقم وطني', 'كوتا']
+            };
+
+            // Get the current circle name from the server-side ViewBag
+            var currentCircleName = '@circlename';
+            var chairTypeSelects = document.querySelectorAll('.ChairType');
+
+            function updateChairOptions(circleName) {
+                var options = chairOptions[circleName] || [];
+                chairTypeSelects.forEach(function (select) {
+                    select.innerHTML = ''; // Clear existing options
+                    options.forEach(function (option) {
+                        var opt = document.createElement('option');
+                        opt.value = option;
+                        opt.textContent = option;
+                        select.appendChild(opt);
+                    });
+                });
+            }
+
+            // Initialize chair options based on the initial circle name
+            updateChairOptions(currentCircleName);
+
+            // Add event listeners for any changes if you dynamically change circle names
+            // (you can implement this if you provide a way to update circle names)
+        });
+
+        function submitForm() {
+            Swal.fire({
+                title: 'تم التقديم!',
+                text: 'تم تقديم بيانات المترشحين بنجاح.',
+                icon: 'success',
+                confirmButtonText: 'حسنًا'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('candidateForm').submit();
+                }
+            });
+        }
+    </script>
+}
+
+<style>
+    .advertisement_button {
+        margin: auto;
+        text-align: center;
+    }
+
+    .advertisement_Card {
+        width: 80%;
+        margin: auto;
+    }
+
+    .form-container {
+        border: 2px solid #ccc;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .form-container legend {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: none;
+            background: white;
+            padding: 0 10px;
+        }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            width: 80%; /* Adjust this value as needed */
+        }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+</style>

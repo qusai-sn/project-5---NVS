@@ -1,0 +1,80 @@
+﻿@model E_voting_System.Models.ContactForm
+
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="~/Content">
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <center>
+        <section class="section-contact contact-3 pt-60 pt-lg-100 pt-xxl-120 pb-40">
+            <div class="container">
+                <div class="contact-form-wrapper bg-light p-4 p-lg-40 shadow-lg rounded" style="text-align:end">
+                    <h2 class="mb-30 mb-lg-40 text-lg-center wow fadeInUp">
+                        تواصل معنا
+                    </h2>
+                    <br />
+                    <div class="form-group row justify-content-center">
+                        <div class="col-md-6">
+                            <label for="InputEmail" class="control-label">البريد الإلكتروني</label>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", id = "InputEmail", style = "height: 50px;" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-md-6">
+                            <label for="InputName" class="control-label">الاسم الرباعي</label>
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", id = "InputName", style = "height: 50px;" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row justify-content-center">
+                        <div class="col-md-6">
+                            <label for="InputSubject" class="control-label">العنوان</label>
+                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", id = "InputSubject", style = "height: 50px;" } })
+                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-md-6">
+                            <label for="InputMessage" class="control-label">الاستفسار</label>
+                            @Html.TextAreaFor(model => model.Message, new { @class = "form-control", rows = "6", id = "InputMessage", style = "resize: vertical; height: 150px;" })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row justify-content-center">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                أرسل الاستفسار
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- contact-form-wrapper -->
+            </div>
+            <!-- container -->
+        </section>
+    </center>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Check if the success parameter is present in the URL
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success') && urlParams.get('success').toLowerCase() === 'true') {
+            Swal.fire({
+                title: 'شكرًا لتواصلك معنا',
+                text: "سيصلك الرد قريبًا عبر البريد الإلكتروني, شكرًا لانتظارك",
+                icon: 'success',
+                confirmButtonText: 'حسنًا'
+            });
+        }</script>
+}

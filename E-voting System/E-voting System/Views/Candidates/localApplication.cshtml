@@ -1,0 +1,145 @@
+﻿@model E_voting_System.Models.localList
+
+@{
+    ViewBag.Title = "تطبيق القائمة المحلية";
+}
+
+<section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
+    <div class="container advertisement_Card">
+        <div class="row">
+            <div class="col-md-6 img-container">
+                <img src="https://cdn.vectorstock.com/i/preview-1x/62/91/ballot-box-with-voting-paper-jordan-vector-2016291.jpg" class="img-fluid mb-4" alt="صورة الإعلان" />
+            </div>
+            <div class="col-md-6">
+                <div class="form-container">
+                    <form id="localListForm" action="@Url.Action("localApplication", "Candidates")" method="post" enctype="multipart/form-data" style="direction:rtl;">
+                        @Html.AntiForgeryToken()
+
+                        <fieldset>
+                            <legend>معلومات الدائرة والقائمة</legend>
+                            <div class="form-group">
+                                <label for="CircleName" class="form-label">اسم الدائرة</label>
+                                <select id="CircleName" name="CircleName" onchange="updateForm()" class="form-select">
+                                    <option value="">اختر دائرة</option>
+                                    <option value="Circle 1">اربد الأولى</option>
+                                    <option value="Circle 2">اربد الثانية</option>
+                                    <option value="Circle 3">جرش</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ListName" class="form-label">اسم القائمة</label>
+                                @Html.EditorFor(model => model.list_Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.list_Name, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="NumberOfCandidates" class="form-label">عدد المترشحين</label>
+                                @Html.EditorFor(model => model.list_Candidates, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.list_Candidates, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ListLogo" class="form-label">شعار القائمة</label>
+                                <input type="file" id="ListLogo" name="ListLogo" class="form-control" />
+                                @Html.ValidationMessageFor(model => model.List_Logo, "", new { @class = "text-danger" })
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>معلومات المفوض</legend>
+                            <div class="form-group">
+                                <label for="Delegate_ID" class="form-label">رقم الهوية</label>
+                                @Html.EditorFor(model => model.Delegate_ID, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Delegate_ID, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Delegate_Name" class="form-label">اسم المفوض</label>
+                                @Html.EditorFor(model => model.Delegate_Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Delegate_Name, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Delegate_Email" class="form-label">البريد الإلكتروني للمفوض</label>
+                                @Html.EditorFor(model => model.Delegate_Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Delegate_Email, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Delegate_Phone" class="form-label">رقم هاتف المفوض</label>
+                                @Html.EditorFor(model => model.Delegate_Phone, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Delegate_Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </fieldset>
+
+                        <div class="advertisement_button">
+                            <button type="submit" class="btn btn-primary btn-block">إرسال</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+}
+
+<style>
+    .advertisement_button {
+        margin: auto;
+        text-align: center;
+    }
+
+    .advertisement_Card {
+        width: 80%;
+        margin: auto;
+    }
+
+    .form-container {
+        border: 2px solid #ccc;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .form-container legend {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: none;
+            background: white;
+            padding: 0 10px;
+        }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            width: 80%; /* Adjust this value as needed */
+        }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+</style>
