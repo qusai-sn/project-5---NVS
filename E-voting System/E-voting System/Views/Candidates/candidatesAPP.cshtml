@@ -1,14 +1,18 @@
-﻿
-@model IEnumerable<E_voting_System.Models.localCandidate>
-
+﻿@model IEnumerable<E_voting_System.Models.localCandidate>
 
 @{
     ViewBag.Title = "تطبيق المترشحين";
     var number = ViewBag.number;
     var x = Convert.ToInt32(Session["count"].ToString());
-    var circlename = ViewBag.CircleName;
+    var circlename = Session["circlename"];
+    var successMessage = TempData["SuccessMessage"];
 }
-
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Cairo', sans-serif;
+    }
+</style>
 <section class="section-advertisement pt-60 pt-lg-100 pt-xxl-120 pb-40">
     <div class="container advertisement_Card">
         <h2 class="text-center">تطبيق المترشحين</h2>
@@ -53,7 +57,7 @@
                 </div>
 
                 <div class="advertisement_button">
-                    <input type="button" value="حفظ المترشحين" class="btn btn-primary" onclick="submitForm()" />
+                    <input type="submit" value="حفظ المترشحين" class="btn btn-primary" />
                 </div>
             </div>
         }
@@ -91,25 +95,22 @@
             // Initialize chair options based on the initial circle name
             updateChairOptions(currentCircleName);
 
-            // Add event listeners for any changes if you dynamically change circle names
-            // (you can implement this if you provide a way to update circle names)
+          
         });
 
-        function submitForm() {
-            Swal.fire({
-                title: 'تم التقديم!',
-                text: 'تم تقديم بيانات المترشحين بنجاح.',
-                icon: 'success',
-                confirmButtonText: 'حسنًا'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('candidateForm').submit();
-                }
-            });
-        }
+          // Show success message if present
+ 
+  if (successMessage) {
+      Swal.fire({
+          title: 'تم التقديم!',
+          text: successMessage,
+          icon: 'success',
+          confirmButtonText: 'حسنًا'
+      });
+  }
     </script>
-}
 
+}
 <style>
     .advertisement_button {
         margin: auto;

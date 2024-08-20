@@ -44,7 +44,7 @@ namespace E_voting_System.Controllers
             // If we got this far, something failed, redisplay form
             return View(D);
         }
-        
+
 
 
 
@@ -76,9 +76,11 @@ namespace E_voting_System.Controllers
             return View(db.Debates.ToList());
         }
         // GET: Debates1
-        public ActionResult IndexDebatsesHome()
+        public ActionResult IndexDebatsesHome(Debate debate)
         {
-            return View(db.Debates.ToList());
+            var approvedDebate = db.Debates.Where(a => a.Status == "Approved").ToList();
+            ViewBag.debate = approvedDebate;
+            return View(approvedDebate);
         }
         // GET: Debates1/Details/5
         public ActionResult Details(int? id)
@@ -138,21 +140,24 @@ namespace E_voting_System.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult Edit([Bind(Include = "ID,Circle_ID,Date_Of_Debate,Topic,First_Candidate,First_Candidate_List,Second_Candidate,Second_Candidate_List,Status,Zoom_link")] Debate debate)
         {
-
-            var x1 = db.Debates.Where(x => x.ID == debate.ID).FirstOrDefault();
-            x1.Status = debate.Status;
-            x1.Zoom_link = debate.Zoom_link;
-
             if (ModelState.IsValid)
             {
-                db.Entry(x1).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                var x1 = db.Debates.Where(x => x.ID == debate.ID).FirstOrDefault();
+                if (x1 != null)
+                {
+                    x1.Status = debate.Status;
+                    x1.Zoom_link = debate.Zoom_link;
+                    db.Entry(x1).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
             return View(debate);
         }
+
 
         // GET: Debates1/Delete/5
         public ActionResult Delete(int? id)
@@ -179,6 +184,44 @@ namespace E_voting_System.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Approve(int id)
+        {
+            var debate = db.Debates.Find(id);
+            if (debate != null)
+            {
+                debate.Status = "Approved";
+                db.Entry(debate).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            return RedirectToAction("IndexDebatsesHome");
+        }
+
+        public ActionResult Reject(int id)
+        {
+            var debate = db.Debates.Find(id);
+            if (debate != null)
+            {
+                debate.Status = "Rejected";
+                db.Entry(debate).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            return RedirectToAction("IndexDebatsesHome");
+        }
+        public ActionResult EditZoomLink(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Debate debate = db.Debates.Find(id);
+            if (debate == null)
+            {
+                return HttpNotFound();
+            }
+            return View(debate);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

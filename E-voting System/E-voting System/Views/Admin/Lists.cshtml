@@ -45,7 +45,9 @@
 
                         @if (!string.IsNullOrEmpty(localList.List_Logo))
                         {
-                            <img src="@Url.Content(localList.List_Logo)" alt="Local List Image" class="img-fluid" />
+                            <img src="@Url.Content("~/Content/Uploads/" + localList.List_Logo)" alt="Local List Image" class="img-fluid" />
+
+
                         }
                         <h5>المرشحين</h5>
                         <ul class="list-unstyled">
@@ -110,7 +112,9 @@
                         <p>Circle ID: @partyList.List_Name</p>
                         @if (!string.IsNullOrEmpty(partyList.List_Logo))
                         {
-                            <img src="@Url.Content(partyList.List_Logo)" alt="Party List Image" class="img-fluid" />
+
+                            <img src="@Url.Content("~/Content/Uploads/" + partyList.List_Logo)" alt="Local List Image" class="img-fluid" />
+
                         }
                         <h5 class="mb-3">المرشحين</h5>
 

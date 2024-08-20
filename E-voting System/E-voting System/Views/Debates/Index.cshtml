@@ -4,6 +4,8 @@
 
 <h2 class="text-center my-4" style="color: var(--bs-primary);">المناظرات</h2>
 
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 @using (Html.BeginForm("Index", "Debates", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <style>
@@ -92,9 +94,24 @@
                     <input name="Second_Candidate_List" type="text" class="form-control" id="Second_Candidate_List">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-custom">تقديم الطلب</button>
+                    <button type="submit" class="btn btn-custom" onclick="submitForm()">تقديم الطلب</button>
                 </div>
             </div>
         </div>
     </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function submitForm() {
+            Swal.fire({
+                title: 'تم التقديم!',
+                text: 'تم تقديم بيانات المترشحين بنجاح.',
+                icon: 'success',
+                confirmButtonText: 'حسنًا'
+            }); // edit the timing
+        }
+    </script>
+
 }

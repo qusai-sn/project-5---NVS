@@ -399,7 +399,7 @@ namespace E_voting_System.Controllers
             var model = new CirclesViewModel
             {
                 ActiveCircleId = user.Circle_ID,
-                Circles = Enumerable.Range(1, 18).ToList() // List of circle IDs from 1 to 18
+                Circles = Enumerable.Range(1, 4).ToList() // List of circle IDs from 1 to 18
             };
 
             return View(model);

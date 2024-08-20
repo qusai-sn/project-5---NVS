@@ -41,7 +41,7 @@ namespace E_voting_System.Controllers
 
 
                 // UPLOAD A LOGO FOR THE LIST
-                var uploadPath = Server.MapPath("~/Uploads");
+                var uploadPath = Server.MapPath("~/Content/Uploads");
                 if (!Directory.Exists(uploadPath))
                 {
                     Directory.CreateDirectory(uploadPath);
@@ -52,6 +52,36 @@ namespace E_voting_System.Controllers
                     var listLogoPath = Path.Combine(uploadPath, listLogoFileName);
                     ListLogo.SaveAs(listLogoPath);
                     localList.List_Logo = listLogoFileName;
+                }
+                switch (CircleName)
+                {
+                    case "Circle 1":
+                        if (Convert.ToInt32(localList.list_Candidates) < 8)
+                        {
+                            ModelState.AddModelError(nameof(localList.list_Candidates), "ادخل على الاقل 8 مقاعد");
+
+                            return View();
+                        }
+                        break;
+
+                    case "Circle 2":
+                        if (Convert.ToInt32(localList.list_Candidates) < 7)
+                        {
+                            ModelState.AddModelError(nameof(localList.list_Candidates), "ادخل على الاقل 7 مقاعد");
+                            return View();
+
+                        }
+                        break;
+
+                    case "Circle 3":
+                        if (Convert.ToInt32(localList.list_Candidates) < 4)
+                        {
+                            ModelState.AddModelError(nameof(localList.list_Candidates), "ادخل على الاقل 4 مقاعد");
+                            return View();
+
+                        }
+                        break;
+
                 }
                 db.localLists.Add(localList);
                 db.SaveChanges();
@@ -69,14 +99,13 @@ namespace E_voting_System.Controllers
 
 
         }
-
         public ActionResult candidatesAPP()
         {
             var x = Session["count"];
             string listName = Session["list_name"] as string;
             int listID = Convert.ToInt32(Session["list_id"]);
             string circleName = Session["circlename"] as string;
-            ViewBag.CircleName = circleName;
+            
             var list = db.localLists.FirstOrDefault(i => i.list_Name == listName);
             int number =Convert.ToInt32(list.list_Candidates) ;
             ViewBag.number = number;
@@ -90,32 +119,11 @@ namespace E_voting_System.Controllers
             // Retrieve the session value first
             string listName = Session["list_name"] as string;
             int listID = Convert.ToInt32(Session["list_id"]);
+            string circleName = Session["circlename"] as String;
 
             if (ModelState.IsValid)
             {
-                //foreach (var candidate in candidated)
-                //{
-                //    // Assign the list name and ID to the candidate
-                //    candidate.List_Name = listName;
-                //    candidate.List_ID = listID;
 
-                //    // Optional: Validate each candidate entity manually
-                //    var validationResults = new List<ValidationResult>();
-                //    var validationContext = new ValidationContext(candidate, null, null);
-
-                //    if (!Validator.TryValidateObject(candidate, validationContext, validationResults, true))
-                //    {
-                //        foreach (var error in validationResults)
-                //        {
-                //            ModelState.AddModelError("", error.ErrorMessage);
-                //        }
-                //        return View(candidated); // Return the view with the errors
-                //    }
-
-                //    // Add the candidate to the database
-                //    db.LocalCandidates.Add(candidate);
-                //    continue;
-                //}
                 foreach (var candidate in candidated)
                 {
 
@@ -131,11 +139,54 @@ namespace E_voting_System.Controllers
                         Picture = "ssss",
                         List_ID = Convert.ToInt32(Session["list_id"])
                     };
+
+                    var quotaCount = candidated.Count(c => c.Type_Of_Chair == "كوتا");
+                    var christianCount = candidated.Count(c => c.Type_Of_Chair == "مسيحي");
+                    switch (circleName)
+                    {
+                        case "Circle 1":
+
+                            if (quotaCount !=1)
+                            {   
+                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                return View();
+                            }
+
+                            break;
+                        case "Circle 2":
+
+                            if (quotaCount != 1)
+                            {
+                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                return View();
+                            }
+                            if (christianCount != 1)
+                            {
+                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'مسيحي'.");
+                                return View();
+                            }
+                            break;
+                        case "Circle 3":
+
+                            if (quotaCount !=1)
+                            {
+                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                return View();
+                            }
+                            break;
+
+                    }
+
+
                     db.localCandidates.Add(localCandidate);
+                    
                 }
+                TempData["SuccessMessage"] = "تم تقديم بيانات المترشحين بنجاح.";
+
                 try
                 {
                     db.SaveChanges();
+                   
                 }
                 catch (DbEntityValidationException ex)
                 {
@@ -154,7 +205,6 @@ namespace E_voting_System.Controllers
             Session["x"] = candidated;
             return RedirectToAction("Index", "Home");
         }
-
         [HttpGet]
         public ActionResult partyApplication()
         {
