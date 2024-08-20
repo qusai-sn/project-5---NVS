@@ -4,8 +4,6 @@
 
 <h2 class="text-center my-4" style="color: var(--bs-primary);">المناظرات</h2>
 
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 @using (Html.BeginForm("Index", "Debates", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <style>
@@ -101,7 +99,6 @@
     </div>
 }
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function submitForm() {
@@ -110,7 +107,11 @@
                 text: 'تم تقديم بيانات المترشحين بنجاح.',
                 icon: 'success',
                 confirmButtonText: 'حسنًا'
-            }); // edit the timing
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('candidateForm').submit();
+                }
+            });
         }
     </script>
 

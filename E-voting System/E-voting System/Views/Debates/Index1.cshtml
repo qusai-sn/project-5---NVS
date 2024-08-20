@@ -2,19 +2,18 @@
 
 
 @model IEnumerable<E_voting_System.Models.Debate>
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
- 
+
 <head>
     <style>
         body {
             background-color: #f8f9fa;
         }
 
-        h2 {
+        h3 {
             color: #007bff;
             margin-bottom: 20px;
         }
@@ -46,84 +45,82 @@
                 border-color: #004085;
             }
 
-        .card {
-            transition: background-color 0.3s ease;
-            background-color: cornflowerblue;
+        .btn-success {
+            background-color: green;
+            border-color: green;
         }
 
-            .card:hover {
-                background-color: #e0f7fa;
+            .btn-success:hover {
+                background-color: #004d00;
+                border-color: #003d00;
+            }
+
+        .btn-danger {
+            background-color: red;
+            border-color: red;
+        }
+
+            .btn-danger:hover {
+                background-color: #cc0000;
+                border-color: #b30000;
             }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h2 class="text-center my-4">طلب المناظرات</h2>
+        <h3 class="text-center my-4">موعد المناظرات</h3>
 
-        @*<p class="text-center">
-                @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary mb-3" })
-            </p>*@
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>
-                        Circle ID
-                    </th>
-                    <th>
-                        Date Of Debate
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Topic)
-                    </th>
-                    <th>
-                        First Candidate
-                    </th>
-                    <th>
-                        First Candidate List
-                    </th>
-                    <th>
-                        Second Candidate
-                    </th>
-                    <th>
-                        Second Candidate List
-                    </th>
-                    <th></th>
+                    <th>تاريخ المناظرة</th>
+                    <th>عنوان المناظرة </th>
+                    <th>المرشح الأول </th>
+                    <th>رقم قائمة المرشح الأول</th>
+                    <th>المرشح الثاني</th>
+                    <th>رقم قائمة المرشح الثاني</th>
+                    <th>الحالة</th>
+                    <th>Zoom رابط</th>
+                    <th>الإجرائات</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Date_Of_Debate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Topic)</td>
+                        <td>@Html.DisplayFor(modelItem => item.First_Candidate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.First_Candidate_List)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Second_Candidate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Second_Candidate_List)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Zoom_link)</td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Circle_ID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Date_Of_Debate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Topic)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.First_Candidate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.First_Candidate_List)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Second_Candidate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Second_Candidate_List)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                            @if (item.Status != "Approved" && item.Status != "Rejected")
+                            {
+                                using (Html.BeginForm("Approve", "Debates", FormMethod.Post, new { @class = "d-inline" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.Hidden("id", item.ID)
+                                    <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                }
+
+                                using (Html.BeginForm("Reject", "Debates", FormMethod.Post, new { @class = "d-inline" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.Hidden("id", item.ID)
+                                    <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                                }
+                            }
+                            <a href="@Url.Action("Edit", "Debates", new { id = item.ID })" class="btn btn-primary btn-sm">Edit</a>
                         </td>
                     </tr>
                 }
             </tbody>
+
+
         </table>
     </div>
 </body>

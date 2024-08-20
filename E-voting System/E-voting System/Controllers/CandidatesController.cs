@@ -148,7 +148,7 @@ namespace E_voting_System.Controllers
 
                             if (quotaCount !=1)
                             {   
-                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                ModelState.AddModelError("", "يجب أن يكون هناك مترشح واحد فقط من نوع كوتا.");
                                 return View();
                             }
 
@@ -157,12 +157,12 @@ namespace E_voting_System.Controllers
 
                             if (quotaCount != 1)
                             {
-                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                ModelState.AddModelError("", "يجب أن يكون هناك مترشح واحد فقط من نوع كوتا.");
                                 return View();
                             }
                             if (christianCount != 1)
                             {
-                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'مسيحي'.");
+                                ModelState.AddModelError("", "يجب أن يكون هناك مترشح واحد فقط من نوع مسيحي.");
                                 return View();
                             }
                             break;
@@ -170,7 +170,7 @@ namespace E_voting_System.Controllers
 
                             if (quotaCount !=1)
                             {
-                                ModelState.AddModelError("", "يجب إدخال خيار واحد على الأقل كـ 'كوتا'.");
+                                ModelState.AddModelError("", "يجب أن يكون هناك مترشح واحد فقط من نوع كوتا.");
                                 return View();
                             }
                             break;

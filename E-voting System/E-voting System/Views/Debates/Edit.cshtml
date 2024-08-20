@@ -3,104 +3,109 @@
 @model E_voting_System.Models.Debate
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Debate";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
 }
 
-<h2>Edit</h2>
+<h2 style="text-align:center;">تعديل الطلب</h2>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<style>
+    .form-container {
+        width: 40%;
+        margin: 0 auto; /* Center the form horizontally */
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+    }
 
-    <div class="form-horizontal">
-        <h4>Debate</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID)
+    .col-md-offset-2.col-md-10 {
+        display: flex;
+        gap: 8px;
+    }
+</style>
+
+<div class="form-container" style="direction:rtl;">
+    @using (Html.BeginForm("Edit", "Debates", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Circle_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            تاريخ المناظرة
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Circle_ID, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.Circle_ID, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Date_Of_Debate)
+                @Html.ValidationMessageFor(model => model.Date_Of_Debate)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Date_Of_Debate, htmlAttributes: new { @class = "control-label col-md-2" })
+            عنوان المناظرة
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Date_Of_Debate, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.Date_Of_Debate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Topic)
+                @Html.ValidationMessageFor(model => model.Topic)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Topic, htmlAttributes: new { @class = "control-label col-md-2" })
+            رابط Zoom
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Topic, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.Topic, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.First_Candidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.First_Candidate, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.First_Candidate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.First_Candidate_List, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.First_Candidate_List, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.First_Candidate_List, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Second_Candidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Second_Candidate, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.Second_Candidate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Second_Candidate_List, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Second_Candidate_List, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.Second_Candidate_List, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-
-                @Html.RadioButtonFor(m => m.Status, "Accept")@Html.Label("Accept")
-                @Html.RadioButtonFor(m => m.Status, "Reject")@Html.Label("Reject")
-                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Zoom_link, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Zoom_link, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Zoom_link, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Zoom_link)
+                @Html.ValidationMessageFor(model => model.Zoom_link)
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+                <button type="button" class="btn btn-danger" id="deleteButton" color: black;">حذف</button>
             </div>
         </div>
-    </div>
+    }
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('deleteButton').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This action cannot be undone!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If confirmed, submit the form to delete the item
+                    var form = document.createElement('form');
+                    form.method = 'post';
+                    form.action = '@Url.Action("DeleteConfirmed", "Debates")';
+                    var inputId = document.createElement('input');
+                    inputId.type = 'hidden';
+                    inputId.name = 'id';
+                    inputId.value = '@Model.ID'; // Set the ID of the debate to delete
+                    form.appendChild(inputId);
+
+                    var token = document.createElement('input');
+                    token.type = 'hidden';
+                    token.name = '__RequestVerificationToken';
+                    token.value = $('input[name="__RequestVerificationToken"]').val();
+                    form.appendChild(token);
+
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            });
+        });
+    </script>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index1")
-</div>

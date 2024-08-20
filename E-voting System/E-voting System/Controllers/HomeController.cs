@@ -9,8 +9,14 @@ namespace E_voting_System.Controllers
 {
     public class HomeController : Controller
     {
+        private ElectionEntities db = new ElectionEntities();
+
         public ActionResult Index()
         {
+            var record = db.ElectionSchedules.Find(1);
+
+            Session["electionDates"] = record;
+
             return View();
         }
         public ActionResult Policy()
@@ -18,7 +24,6 @@ namespace E_voting_System.Controllers
             return View();
         }
 
-        private ElectionEntities db = new ElectionEntities();
 
         [HttpGet]
         public ActionResult AdminLogin()

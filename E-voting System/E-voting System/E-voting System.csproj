@@ -143,7 +143,6 @@
     <Compile Include="Controllers\ContactFormsController.cs" />
     <Compile Include="Controllers\DateController.cs" />
     <Compile Include="Controllers\DebatesController.cs" />
-    <Compile Include="Controllers\ElectionDateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\SweetController.cs" />
@@ -476,7 +475,6 @@
     <Content Include="Views\Debates\Edit.cshtml" />
     <Content Include="Views\Debates\Delete.cshtml" />
     <Content Include="Views\Debates\Details.cshtml" />
-    <Content Include="Views\ElectionDate\DateSet.cshtml" />
     <Content Include="Views\ElectionDate\Edit.cshtml" />
     <Content Include="Views\Home\AdminLogin.cshtml" />
     <Content Include="Views\Candidates\candidatesAPP.cshtml" />

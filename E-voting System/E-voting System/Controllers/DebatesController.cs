@@ -121,6 +121,62 @@ namespace E_voting_System.Controllers
         }
 
         // GET: Debates1/Edit/5
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Debate debate = db.Debates.Find(id);
+        //    if (debate == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(debate);
+        //}
+
+        //// POST: Debates1/Edit/5
+        //// To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+
+        //public ActionResult Edit([Bind(Include = "ID,Circle_ID,Date_Of_Debate,Topic,First_Candidate,First_Candidate_List,Second_Candidate,Second_Candidate_List,Status,Zoom_link")] Debate debate)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var x1 = db.Debates.Where(x => x.ID == debate.ID).FirstOrDefault();
+        //        if (x1 != null)
+        //        {
+        //            x1.Status = debate.Status;
+        //            x1.Zoom_link = debate.Zoom_link;
+        //            db.Entry(x1).State = EntityState.Modified;
+        //            db.SaveChanges();
+        //            return RedirectToAction("Index");
+        //        }
+        //    }
+        //    return View(debate);
+        //}
+
+
+        // GET: Debates1/Delete/5
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Debate debate = db.Debates.Find(id);
+        //    if (debate == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(debate);
+        //}
+
+
+
+        // GET: Debates/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -135,55 +191,27 @@ namespace E_voting_System.Controllers
             return View(debate);
         }
 
-        // POST: Debates1/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Debates/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public ActionResult Edit([Bind(Include = "ID,Circle_ID,Date_Of_Debate,Topic,First_Candidate,First_Candidate_List,Second_Candidate,Second_Candidate_List,Status,Zoom_link")] Debate debate)
+        public ActionResult Edit([Bind(Include = "ID,Date_Of_Debate,Topic,First_Candidate,First_Candidate_List,Second_Candidate,Second_Candidate_List,Zoom_link")] Debate debate)
         {
             if (ModelState.IsValid)
             {
-                var x1 = db.Debates.Where(x => x.ID == debate.ID).FirstOrDefault();
-                if (x1 != null)
+                var existingDebate = db.Debates.Find(debate.ID);
+                if (existingDebate != null)
                 {
-                    x1.Status = debate.Status;
-                    x1.Zoom_link = debate.Zoom_link;
-                    db.Entry(x1).State = EntityState.Modified;
+                    // Only update the Zoom link
+                    existingDebate.Zoom_link = debate.Zoom_link;
+
+                    db.Entry(existingDebate).State = EntityState.Modified;
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index1");
                 }
             }
             return View(debate);
         }
 
-
-        // GET: Debates1/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Debate debate = db.Debates.Find(id);
-            if (debate == null)
-            {
-                return HttpNotFound();
-            }
-            return View(debate);
-        }
-
-        // POST: Debates1/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Debate debate = db.Debates.Find(id);
-            db.Debates.Remove(debate);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
 
         public ActionResult Approve(int id)
         {
@@ -194,8 +222,10 @@ namespace E_voting_System.Controllers
                 db.Entry(debate).State = EntityState.Modified;
                 db.SaveChanges();
             }
-            return RedirectToAction("IndexDebatsesHome");
+            // Return to the same view with the updated data
+            return RedirectToAction("Index1", db.Debates.ToList());
         }
+
 
         public ActionResult Reject(int id)
         {
@@ -206,21 +236,23 @@ namespace E_voting_System.Controllers
                 db.Entry(debate).State = EntityState.Modified;
                 db.SaveChanges();
             }
-            return RedirectToAction("IndexDebatsesHome");
+            // Return to the same view with the updated data
+            return RedirectToAction("Index1", db.Debates.ToList());
         }
-        public ActionResult EditZoomLink(int? id)
+
+        [HttpPost, ActionName("DeleteConfirmed")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Debate debate = db.Debates.Find(id);
-            if (debate == null)
+            if (debate != null)
             {
-                return HttpNotFound();
+                db.Debates.Remove(debate);
+                db.SaveChanges();
             }
-            return View(debate);
+            return RedirectToAction("Index1");
         }
+
 
         protected override void Dispose(bool disposing)
         {

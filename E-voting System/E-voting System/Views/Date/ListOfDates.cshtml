@@ -1,26 +1,11 @@
 ﻿@model IEnumerable<E_voting_System.Models.ElectionSchedule>
+
+@{ 
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
 <div class="container">
-    <!-- First Card: Nominate Dates -->
-    <div class="card mb-4">
-        <div class="card-header">
-            Nominate Dates
-        </div>
-        <div class="card-body">
-            @foreach (var item in Model)
-            {
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Nominate ID: @item.ID</h5>
-                        <p class="card-text">
-                            <strong>Start Date of Nominate:</strong> @item.Start_Date_Of_Nominate<br />
-                            <strong>End Date of Nominate:</strong> @item.End_Date_Of_Nominate
-                        </p>
-                        <a href="@Url.Action("EditDates", new { id = item.ID })" class="btn btn-primary">Edit</a>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
+    
 
     <!-- Second Card: Election Dates -->
     <div class="card mb-4">

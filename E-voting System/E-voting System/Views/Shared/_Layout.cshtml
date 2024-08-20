@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    var dateNOW = DateTime.Now;
+    var Dates = Session["electionDates"] as E_voting_System.Models.ElectionSchedule;
+
+    var startDateOfElection = Dates.Start_Date_Of_Election;
+    var endDateOfElection = Dates.End_Date_Of_Election;
+
+    var startDateOfNominate = Dates.Start_Date_Of_Nominate;
+    var endDateOfNominate = Dates.End_Date_Of_Nominate;
+
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -40,7 +53,8 @@
             font-family: 'Cairo', sans-serif;
         }
     </style>
-</head><body>
+</head>
+<body>
     <div class="page landing-page">
         <!--Header Section -->
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light" style="background-color: white; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
@@ -53,9 +67,12 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
+                        @if (dateNOW >= Dates.Start_Date_Of_Election && dateNOW < Dates.End_Date_Of_Election)
+                        {
                         <li class="nav-item" style="padding:10px">
                             @Html.ActionLink("تسجيل الدخول", "Login", "user", new { area = "" }, new { @class = "nav-link" })
                         </li>
+                        }
                         <li class="nav-item" style="padding:10px">
                             @Html.ActionLink("آخر الأخبار", "Index", "Ads", new { area = "" }, new { @class = "nav-link" })
                         </li>
@@ -78,13 +95,29 @@
                             <a class="nav-link dropdown-toggle" href="#" id="electionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 الانتخابات
                             </a>
+
                             <div class="dropdown-menu" aria-labelledby="electionDropdown" style="background-color:white">
-                                @Html.ActionLink("طلب ترشح قائمة محلية", "localApplication", "Candidates", new { area = "" }, new { @class = "dropdown-item" })
-                                @Html.ActionLink("طلب ترشح قائمة حزبية", "partyApplication", "Candidates", new { area = "" }, new { @class = "dropdown-item" })
-                                @Html.ActionLink("طلب تقديم مناظرة", "Index", "Debates", new { area = "" }, new { @class = "dropdown-item" })
-                                @Html.ActionLink("خطط الإنتخابات", "Plans", "Ads", new { area = "" }, new { @class = "dropdown-item" })
-                                @Html.ActionLink("نتائج الانتخابات المحلية", "LocalResult", "Home", new { area = "" }, new { @class = "dropdown-item" })
-                                @Html.ActionLink("نتائج الانتخابات الحزبية", "CalculateVotesForEachParty", "Home", new { area = "" }, new { @class = "dropdown-item" })
+                                @if (dateNOW < Dates.Start_Date_Of_Election)
+                                {
+                                    @Html.ActionLink("طلب ترشح قائمة محلية", "localApplication", "Candidates", new { area = "" }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("طلب ترشح قائمة حزبية", "partyApplication", "Candidates", new { area = "" }, new { @class = "dropdown-item" })
+                                     @Html.ActionLink("خطط الإنتخابات", "Plans", "Ads", new { area = "" }, new { @class = "dropdown-item" })
+
+                                }
+                                else if  (dateNOW >= Dates.Start_Date_Of_Election && dateNOW < Dates.End_Date_Of_Election)
+                                {
+                                    @Html.ActionLink("طلب تقديم مناظرة", "Index", "Debates", new { area = "" }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("خطط الإنتخابات", "Plans", "Ads", new { area = "" }, new { @class = "dropdown-item" })
+
+                                }
+                                else
+                                {
+
+                                    @Html.ActionLink("نتائج الانتخابات المحلية", "LocalResult", "Home", new { area = "" }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("نتائج الانتخابات الحزبية", "CalculateVotesForEachParty", "Home", new { area = "" }, new { @class = "dropdown-item" })
+
+                                }
+
 
                             </div>
                         </li>
@@ -174,7 +207,7 @@
     null,
     new { @class = "text-decoration-none link-hover-animation-1 fw-semibold" })
                                     </li>
-                                 
+
                                 </ul>
                             </div>
                         </div>
@@ -224,10 +257,12 @@
 
             <div class="container">
                 <div class="copyright py-30 py-lg-40 d-flex flex-column flex-md-row gap-3 justify-content-between">
-                    <p class="mb-0 body-color-style-1"><center>
-                        &copy; 2024, نظام الاقتراع الوطني
-                                                           </center>     </p>
-              
+                    <p class="mb-0 body-color-style-1">
+                        <center>
+                            &copy; 2024, نظام الاقتراع الوطني
+                        </center>
+                    </p>
+
                 </div>
             </div>
         </footer>
