@@ -3,16 +3,128 @@
   "WorkspaceRootPath": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\admin\\lists.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\admin\\lists.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\adminpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\adminpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\result\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\result\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\views\\result\\calculatevotesforeachparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\result\\calculatevotesforeachparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\ads\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\ads\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\ads\\adminads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\ads\\adminads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\_editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\_editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\contactforms\\contactsubmissions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\contactforms\\contactsubmissions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\contactformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\contactformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\date\\listofdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\date\\listofdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\date\\editdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\date\\editdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\shared\\_postlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\shared\\_postlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\indexdebatseshome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,28 +139,8 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\views\\debates\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\debatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\debatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\electiondate\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -63,28 +155,8 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\user\\locallist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\date\\listofdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\date\\listofdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\result\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\result\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\date\\editdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\date\\editdates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\home\\adminlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -95,7 +167,7 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|c:\\users\\orange academy\\desktop\\project-5---nvs\\e-voting system\\e-voting system\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -103,32 +175,8 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\candidates\\candidatesapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\ads\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\ads\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\contactforms\\sendreply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\contactforms\\sendreply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\_editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\_editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\ads\\adminads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\ads\\adminads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\contactforms\\reply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -139,24 +187,12 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\contactforms\\contactform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\contactforms\\contactsubmissions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\contactforms\\contactsubmissions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\user\\entercode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\user\\entercode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\adminposts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\adminposts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\user\\typeofelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\user\\typeofelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\admin\\lists.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\admin\\lists.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\candidates\\partycandidatesapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -181,26 +217,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\home\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\home\\localresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\contactformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\contactformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\debates\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\views\\debates\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\views\\user\\circles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -235,10 +251,6 @@
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\controllers\\adminpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\controllers\\adminpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\e-voting system\\models\\listviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA4729-3680-4D7E-84F5-55092B240A79}|E-voting System\\E-voting System.csproj|solutionrelative:e-voting system\\models\\listviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -250,258 +262,375 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index1.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index1.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Index1.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index1.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Index1.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAuwH4AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADQAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T14:27:57.648Z",
+              "WhenOpened": "2024-08-20T18:37:52.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAgwBgAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T10:23:06.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Edit.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Edit.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Edit.cshtml",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAuwG4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:18:48.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IndexDebatsesHome.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T07:19:13.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\About.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Home\\About.cshtml",
-              "ViewState": "AQIAAJMCAAAAAAAAAAAAAJcCAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T10:49:10.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAAAGcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T10:25:57.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "_LayoutAdmin.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_LayoutAdmin.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Shared\\_LayoutAdmin.cshtml",
               "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_LayoutAdmin.cshtml",
               "RelativeToolTip": "E-voting System\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAAwHAAAAAMAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAswGgAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-06T10:33:21.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAAAJ0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T07:14:05.145Z",
+              "DocumentIndex": 6,
+              "Title": "AdminPostsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminPostsController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\AdminPostsController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminPostsController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\AdminPostsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:18:37.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_PostLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_PostLayout.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Shared\\_PostLayout.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_PostLayout.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Shared\\_PostLayout.cshtml",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T20:14:17.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Index.cshtml",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAuwHYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T13:47:20.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "AdsController.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdsController.cs",
               "RelativeDocumentMoniker": "E-voting System\\Controllers\\AdsController.cs",
               "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdsController.cs",
               "RelativeToolTip": "E-voting System\\Controllers\\AdsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAUwM0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T08:46:58.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DebatesController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DebatesController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\DebatesController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DebatesController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\DebatesController.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAgwPkAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T09:41:03.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DateController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DateController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\DateController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DateController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\DateController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCYAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T09:23:02.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ElectionDate\\Edit.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\ElectionDate\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ElectionDate\\Edit.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\ElectionDate\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T13:11:38.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PartyList.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\PartyList.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\PartyList.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\PartyList.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\user\\PartyList.cshtml",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAQwFwAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T20:29:12.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LocalList.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\LocalList.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\LocalList.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\LocalList.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\user\\LocalList.cshtml",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAIwFoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T20:28:17.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "CandidatesController.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\CandidatesController.cs",
               "RelativeDocumentMoniker": "E-voting System\\Controllers\\CandidatesController.cs",
               "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\CandidatesController.cs",
               "RelativeToolTip": "E-voting System\\Controllers\\CandidatesController.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAgwJ8AAABqAAAA",
+              "ViewState": "AQIAABgBAAAAAAAAAAAUwDgBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T14:20:06.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\Login.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\Login.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\user\\Login.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T20:27:29.932Z",
+              "DocumentIndex": 3,
+              "Title": "DateController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DateController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\DateController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DateController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\DateController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAADwvzUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T09:23:02.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ListOfDates.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Date\\ListOfDates.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Date\\ListOfDates.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Date\\ListOfDates.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Date\\ListOfDates.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Lists.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Lists.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Admin\\Lists.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Lists.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Admin\\Lists.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T10:55:24.58Z",
+              "WhenOpened": "2024-08-06T15:07:32.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 8,
               "Title": "LocalResult.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Result\\LocalResult.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Result\\LocalResult.cshtml",
               "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Result\\LocalResult.cshtml",
               "RelativeToolTip": "E-voting System\\Views\\Result\\LocalResult.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAmwH8AAABMAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAwwHIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-06T10:39:40.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalculateVotesForEachParty.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Result\\CalculateVotesForEachParty.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Result\\CalculateVotesForEachParty.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Result\\CalculateVotesForEachParty.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Result\\CalculateVotesForEachParty.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T18:42:59.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Global.asax.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Global.asax.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Global.asax.cs",
+              "RelativeToolTip": "E-voting System\\Global.asax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T06:52:02.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Index.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-07T13:47:20.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Ads\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\Index.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Ads\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-12T09:55:55.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminAds.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\AdminAds.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Ads\\AdminAds.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\AdminAds.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Ads\\AdminAds.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T20:11:53.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Index.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:30:08.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Delete.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Delete.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T19:39:15.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Create.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Create.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T19:38:47.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T13:20:14.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_EditPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T19:38:40.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Delete.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Delete.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:19:01.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Create.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Create.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T19:41:05.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ContactSubmissions.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:19:49.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ContactFormsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\ContactFormsController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\ContactFormsController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\ContactFormsController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\ContactFormsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T13:16:20.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index1.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index1.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Index1.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Index1.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Index1.cshtml",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAJcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T14:27:57.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ListOfDates.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Date\\ListOfDates.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Date\\ListOfDates.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Date\\ListOfDates.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Date\\ListOfDates.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T10:55:24.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Edit.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Edit.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:18:48.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Admin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Admin.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Admin.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Admin.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Admin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T09:38:36.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Details.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Details.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\Details.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:18:56.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "EditDates.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Date\\EditDates.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Date\\EditDates.cshtml",
@@ -514,20 +643,128 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T13:20:14.978Z",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAJ0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:14:05.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Home\\About.cshtml",
+              "ViewState": "AQIAAJMCAAAAAAAAAAAAAJcCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T10:49:10.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAGcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T10:25:57.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IndexDebatsesHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Debates\\IndexDebatsesHome.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-08T07:19:13.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_PostLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_PostLayout.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\Shared\\_PostLayout.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Shared\\_PostLayout.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\Shared\\_PostLayout.cshtml",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T20:14:17.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DebatesController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DebatesController.cs",
+              "RelativeDocumentMoniker": "E-voting System\\Controllers\\DebatesController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\DebatesController.cs",
+              "RelativeToolTip": "E-voting System\\Controllers\\DebatesController.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAgwPkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T09:41:03.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ElectionDate\\Edit.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\ElectionDate\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ElectionDate\\Edit.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\ElectionDate\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T13:11:38.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PartyList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\PartyList.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\PartyList.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\PartyList.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\user\\PartyList.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAQwFwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T20:29:12.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "LocalList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\LocalList.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\LocalList.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\LocalList.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\user\\LocalList.cshtml",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAIwFoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T20:28:17.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\Login.cshtml",
+              "RelativeDocumentMoniker": "E-voting System\\Views\\user\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\Login.cshtml",
+              "RelativeToolTip": "E-voting System\\Views\\user\\Login.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T20:27:29.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "AdminLogin.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\AdminLogin.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\AdminLogin.cshtml",
@@ -535,12 +772,11 @@
               "RelativeToolTip": "E-voting System\\Views\\Home\\AdminLogin.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T13:24:07.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-06T13:24:07.115Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 40,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Web.config",
               "RelativeDocumentMoniker": "E-voting System\\Web.config",
@@ -553,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 41,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Web.config",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Web.config",
@@ -561,12 +797,11 @@
               "RelativeToolTip": "E-voting System\\Views\\Web.config",
               "ViewState": "AQIAABIAAAAAAAAAAAAAACwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-20T12:25:24.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T12:25:24.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 48,
               "Title": "PartycandidatesAPP.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Candidates\\PartycandidatesAPP.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Candidates\\PartycandidatesAPP.cshtml",
@@ -578,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 42,
               "Title": "candidatesAPP.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Candidates\\candidatesAPP.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Candidates\\candidatesAPP.cshtml",
@@ -590,19 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T10:23:06.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 49,
               "Title": "partyApplication.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Candidates\\partyApplication.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Candidates\\partyApplication.cshtml",
@@ -614,19 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Lists.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Lists.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Admin\\Lists.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Admin\\Lists.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Admin\\Lists.cshtml",
-              "ViewState": "AQIAAOYAAAAAAAAAAAAwwAsBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T15:07:32.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 50,
               "Title": "localCandidate.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Models\\localCandidate.cs",
               "RelativeDocumentMoniker": "E-voting System\\Models\\localCandidate.cs",
@@ -638,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 51,
               "Title": "localApplication.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Candidates\\localApplication.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Candidates\\localApplication.cshtml",
@@ -650,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 52,
               "Title": "bootstrap.js.map",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Scripts\\bootstrap.js.map",
               "RelativeDocumentMoniker": "E-voting System\\Scripts\\bootstrap.js.map",
@@ -662,19 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ContactFormsController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\ContactFormsController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\ContactFormsController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\ContactFormsController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\ContactFormsController.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAcwG8AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T13:16:20.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 53,
               "Title": "LocalResult.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Home\\LocalResult.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\Home\\LocalResult.cshtml",
@@ -686,55 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Details.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Details.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Details.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:18:56.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Delete.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Delete.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Delete.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:19:01.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Create.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Create.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T19:41:05.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Admin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Admin.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Debates\\Admin.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Debates\\Admin.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Debates\\Admin.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T09:38:36.316Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "circles.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\circles.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\user\\circles.cshtml",
@@ -746,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "userController.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\userController.cs",
               "RelativeDocumentMoniker": "E-voting System\\Controllers\\userController.cs",
@@ -758,7 +909,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 47,
               "Title": "TypeOfElection.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\TypeOfElection.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\user\\TypeOfElection.cshtml",
@@ -770,7 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "PartyList.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Models\\PartyList.cs",
               "RelativeDocumentMoniker": "E-voting System\\Models\\PartyList.cs",
@@ -782,19 +933,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Ads\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\Index.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Ads\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T09:55:55.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "PartyListViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Models\\PartyListViewModel.cs",
               "RelativeDocumentMoniker": "E-voting System\\Models\\PartyListViewModel.cs",
@@ -806,19 +945,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Index.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:30:08.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "Reply.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\Reply.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\ContactForms\\Reply.cshtml",
@@ -830,7 +957,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 45,
               "Title": "ContactForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\ContactForm.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\ContactForms\\ContactForm.cshtml",
@@ -842,19 +969,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ContactSubmissions.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\ContactForms\\ContactSubmissions.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:19:49.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 46,
               "Title": "EnterCode.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\EnterCode.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\user\\EnterCode.cshtml",
@@ -866,7 +981,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "LoginWithPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\LoginWithPassword.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\user\\LoginWithPassword.cshtml",
@@ -878,7 +993,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\user\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\user\\ResetPassword.cshtml",
@@ -890,7 +1005,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Content\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "E-voting System\\Content\\assets\\css\\style.css",
@@ -902,7 +1017,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "USER.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Models\\USER.cs",
               "RelativeDocumentMoniker": "E-voting System\\Models\\USER.cs",
@@ -914,67 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "AdminPostsController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminPostsController.cs",
-              "RelativeDocumentMoniker": "E-voting System\\Controllers\\AdminPostsController.cs",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Controllers\\AdminPostsController.cs",
-              "RelativeToolTip": "E-voting System\\Controllers\\AdminPostsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:18:37.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AdminAds.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\AdminAds.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\Ads\\AdminAds.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\Ads\\AdminAds.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\Ads\\AdminAds.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T20:11:53.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Delete.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Delete.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T19:39:15.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Create.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\Create.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T19:38:47.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "_EditPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
-              "RelativeDocumentMoniker": "E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
-              "ToolTip": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
-              "RelativeToolTip": "E-voting System\\Views\\AdminPosts\\_EditPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T19:38:40.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 43,
               "Title": "SendReply.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Views\\ContactForms\\SendReply.cshtml",
               "RelativeDocumentMoniker": "E-voting System\\Views\\ContactForms\\SendReply.cshtml",
@@ -986,7 +1041,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "ListViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Orange Academy\\Desktop\\project-5---NVS\\E-voting System\\E-voting System\\Models\\ListViewModel.cs",
               "RelativeDocumentMoniker": "E-voting System\\Models\\ListViewModel.cs",

@@ -1,7 +1,4 @@
-﻿ 
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +43,7 @@
                 }
 
             .sidebar .active {
-                background: #007bff;
+                background: #002d72;
             }
 
         .main-content {
@@ -58,8 +55,9 @@
 
         .navbar {
             margin-bottom: 20px;
-            background: #007bff;
+            background: #002d72;
             color: #fff;
+            border-radius: 0.5rem;
         }
 
             .navbar .navbar-brand {
@@ -101,6 +99,7 @@
             background: #343a40;
             color: #fff;
             text-align: center;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
@@ -108,15 +107,15 @@
 
     <div class="sidebar">
         <h2>Admin</h2>
-        <a href="@Url.Action("Index", "Home")" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="@Url.Action("Index1", "Debates")"><i class="fas fa-comments"></i> Debates Requests</a>
-        <a href="@Url.Action("Lists", "Admin")"><i class="fas fa-user-plus"></i> Nominate Requests</a>
-        <a href="@Url.Action("AdminAds", "Ads")"><i class="fas fa-ad"></i> Ads Requests</a>
-        <a href="@Url.Action("Index", "AdminPosts")"><i class="fas fa-edit"></i> Admin Post</a>
-        <a href="@Url.Action("ListOfDates", "Date")"><i class="fas fa-calendar-alt"></i> Set Dates</a>
-        <a href="@Url.Action("LocalResult", "Result")"><i class="fas fa-map-marker-alt"></i> Local Results</a>
-        <a href="@Url.Action("CalculateVotesForEachParty", "Result")"><i class="fas fa-flag"></i> Party Results</a>
-        <a href="@Url.Action("ContactSubmissions", "ContactForms")"><i class="fas fa-flag"></i> ContactSubmissions</a>
+        <a href="@Url.Action("Index", "Admin")" class="@(Request.Path.ToString().Contains("Home") ? "active" : "")"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="@Url.Action("Index1", "Debates")" class="@(Request.Path.ToString().Contains("Debates") ? "active" : "")"><i class="fas fa-comments"></i> Debates Requests</a>
+        <a href="@Url.Action("Lists", "Admin")" class="@(Request.Path.ToString().Contains("Admin/Lists") ? "active" : "")"><i class="fas fa-user-plus"></i> Nominate Requests</a>
+        <a href="@Url.Action("AdminAds", "Ads")" class="@(Request.Path.ToString().Contains("Ads") ? "active" : "")"><i class="fas fa-ad"></i> Ads Requests</a>
+        <a href="@Url.Action("Index", "AdminPosts")" class="@(Request.Path.ToString().Contains("AdminPosts") ? "active" : "")"><i class="fas fa-edit"></i> Admin Post</a>
+        <a href="@Url.Action("ListOfDates", "Date")" class="@(Request.Path.ToString().Contains("Date") ? "active" : "")"><i class="fas fa-calendar-alt"></i> Set Dates</a>
+        <a href="@Url.Action("LocalResult", "Result")" class="@(Request.Path.ToString().Contains("LocalResult") ? "active" : "")"><i class="fas fa-map-marker-alt"></i> Local Results</a>
+        <a href="@Url.Action("CalculateVotesForEachParty", "Result")" class="@(Request.Path.ToString().Contains("CalculateVotesForEachParty") ? "active" : "")"><i class="fas fa-flag"></i> Party Results</a>
+        <a href="@Url.Action("ContactSubmissions", "ContactForms")" class="@(Request.Path.ToString().Contains("ContactForms") ? "active" : "")"><i class="fas fa-flag"></i> Contact Submissions</a>
         <a href="@Url.Action("Logout", "Home")"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
@@ -126,7 +125,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-          
         </nav>
 
         <div class="container">
@@ -141,6 +139,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    @RenderSection("Scripsts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

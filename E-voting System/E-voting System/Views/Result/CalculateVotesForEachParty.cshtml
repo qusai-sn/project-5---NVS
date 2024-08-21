@@ -1,6 +1,8 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Party lists Results";
 }
+
 @{
     var partyResultsString = Request.Cookies["PartyResults"]?.Value;
     var totalVotesAboveThreshold = Request.Cookies["TotalVotesAboveThreshold"]?.Value;
@@ -27,110 +29,101 @@
     var partyCandidates = ViewBag.PartyCandidates as Dictionary<string, List<string>> ?? new Dictionary<string, List<string>>();
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Party Vote Results</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/site.css" />
-    <style>
-       
+<div class="container">
+    <h1>Party Vote Results</h1>
 
-        h1 {
-            color: #333;
-        }
+    <!-- Display threshold, total participants, and white party votes -->
+    <h2>Election Statistics</h2>
+    <p><strong>Threshold:</strong> @threshold</p>
+    <p><strong>Total Participants:</strong> @totalParticipants</p>
+    <p><strong>Total White Party Votes:</strong> @totalWhitePartyVotes</p>
 
-        h2 {
-            color: #444;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    <!-- Display party seats and candidates in cards -->
+    <h2>Party Seats and Candidates</h2>
+    <div class="row">
+        @foreach (var partyName in partySeats.Keys)
+        {
+            var seatCount = partySeats[partyName];
+            var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ensure no overflow from cards */
-        }
-
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            margin: 10px;
-            padding: 15px;
-            width: calc(33% - 20px); /* Three cards per row */
-            float: left;
-            box-sizing: border-box;
-            min-height: 150px; /* Ensure cards have enough height */
-        }
-
-            .card h3 {
-                margin-top: 0;
-                font-size: 18px;
-                color: #007bff;
-            }
-
-            .card p {
-                margin: 5px 0;
-            }
-
-            .card ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-                .card ul li {
-                    padding: 5px 0;
-                    border-bottom: 1px solid #ddd;
-                }
-
-        .clear {
-            clear: both;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Party Vote Results</h1>
-
-        <!-- Display threshold, total participants, and white party votes -->
-        <h2>Election Statistics</h2>
-        <p><strong>Threshold:</strong> @threshold</p>
-        <p><strong>Total Participants:</strong> @totalParticipants</p>
-        <p><strong>Total White Party Votes:</strong> @totalWhitePartyVotes</p>
-
-
-
-        <!-- Display party seats and candidates in cards -->
-        <h2>Party Seats and Candidates</h2>
-        <div class="clear">
-            @foreach (var partyName in partySeats.Keys)
+            if (candidates.Any())
             {
-                var seatCount = partySeats[partyName];
-                var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
-
-                if (candidates.Any())
-                {
-                    <div class="card">
-                        <h3>@partyName</h3>
-                        <p><strong>Seats:</strong> @seatCount</p>
-                        <p><strong>Candidates:</strong></p>
-                        <ul>
-                            @foreach (var candidate in candidates)
-                            {
-                                <li>@candidate</li>
-                            }
-                        </ul>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="card-title">@partyName</h3>
+                            <p><strong>Seats:</strong> @seatCount</p>
+                            <p><strong>Candidates:</strong></p>
+                            <ul>
+                                @foreach (var candidate in candidates)
+                                {
+                                    <li>@candidate</li>
+                                }
+                            </ul>
+                        </div>
                     </div>
-                }
+                </div>
             }
-        </div>
+        }
     </div>
-</body>
-</html>
+</div>
+
+<style>
+    body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    h2 {
+        color: #444;
+        border-bottom: 2px solid #002d72;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+    .card-title {
+        font-size: 18px;
+        color: #002d72;
+    }
+
+    .card p, .card ul li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .card ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+</style>

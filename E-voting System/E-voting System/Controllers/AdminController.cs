@@ -19,6 +19,20 @@ namespace E_voting_System.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            var totalUsers = db.USERS.Count();
+            var totalApprovedAds = db.ElectionAdvertisements.Count(a => a.Status == "approved");
+            var totalLocalVotes = db.USERS.Sum(u => u.local_Vote );
+            var totalPartyVotes = db.USERS.Sum(u => u.Party_Vote );
+            var numberOfAds = db.ElectionAdvertisements.Count();
+            var numberOfPosts = db.ElectionPosts.Count();
+
+            ViewBag.TotalUsers = totalUsers;
+            ViewBag.TotalApprovedAds = totalApprovedAds;
+            ViewBag.TotalLocalVotes = totalLocalVotes;
+            ViewBag.TotalPartyVotes = totalPartyVotes;
+            ViewBag.NumberOfAds = numberOfAds;
+            ViewBag.NumberOfPosts = numberOfPosts;
+
             return View();
         }
 
