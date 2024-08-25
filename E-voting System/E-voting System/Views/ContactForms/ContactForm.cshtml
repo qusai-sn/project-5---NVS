@@ -4,10 +4,107 @@
 <link rel="stylesheet" href="~/Content">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    body {
+    body, h2 {
         font-family: 'Cairo', sans-serif;
+        margin-left: 0px !important;
+        margin-right: 0x !important;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            display: block;
+            text-align: right;
+        }
+
+    .form-control {
+        width: 100%;
+        height: 50px;
+    }
+
+    .btn-submit {
+        display: block;
+        margin: 0 auto;
     }
 </style>
+<style>
+
+
+    .container1 {
+        position: relative;
+        display: inline-block;
+    }
+
+    .text-box1 {
+        position: absolute;
+        top: -30px; /* Adjust this value to move the text closer or farther from the image */
+        right: 10px;
+        background-color: white; /* Optional: background for text */
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 18px; /* Adjust the text size as needed */
+        color: #153448; /* Adjust the color as needed */
+    }
+
+    .container1 img {
+        display: block;
+        width: 450px; /* Adjust the image size */
+        height: auto;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: flex-end;
+        justify-content: center;
+        direction: rtl;
+    }
+
+    .primary-message {
+        font-size: 42px;
+        line-height: 1.6;
+        color: black;
+    }
+
+    .secondary-message {
+        font-size: 42px;
+        line-height: 1.6;
+        color: red;
+    }
+
+    .image {
+        width: 66%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .line {
+        border-bottom: 3px solid red;
+        margin-top: 3px;
+        width: 70%;
+    }
+
+    .line2 {
+        border-bottom: 3px solid darkgreen;
+        margin-top: 3px;
+        width: 60%;
+    }
+</style>
+<div class="image-container">
+    <img src="~/Content/images/product/Screenshot_2024-08-20_210124.png" alt="Map with Flag" class="image">
+    <div class="message-container">
+        <p class="primary-message">
+            هل تود الاستفسار عن العملية الانتخابية أو تقديم أي مقترحات؟ <br />
+        </p>
+        <span class="secondary-message"> نحن هُنا لِمُساعدتك!</span>
+    </div>
+</div>
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -15,58 +112,53 @@
     <center>
         <section class="section-contact contact-3 pt-60 pt-lg-100 pt-xxl-120 pb-40">
             <div class="container">
-                <div class="contact-form-wrapper bg-light p-4 p-lg-40 shadow-lg rounded" style="text-align:end">
-                    <h2 class="mb-30 mb-lg-40 text-lg-center wow fadeInUp">
-                        تواصل معنا
-                    </h2>
-                    <br />
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-6">
+                <div class="contact-wrapper d-flex bg-light shadow-lg rounded">
+                    <div class="col-md-6 p-4 p-lg-40">
+                        <h2 class="mb-30 mb-lg-40 text-lg-center wow fadeInUp">
+                            تواصل معنا
+                        </h2><div class="line2"></div><div class="line"></div>
+                        <br />
+                        <div class="form-group">
                             <label for="InputEmail" class="control-label">البريد الإلكتروني</label>
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", id = "InputEmail", style = "height: 50px;" } })
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", id = "InputEmail" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
-                        <br />
-                    </div>
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-6">
+
+                        <div class="form-group">
                             <label for="InputName" class="control-label">الاسم الرباعي</label>
-                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", id = "InputName", style = "height: 50px;" } })
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", id = "InputName" } })
                             @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                         </div>
-                    </div>
-                    <br />
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-6">
+
+                        <div class="form-group">
                             <label for="InputSubject" class="control-label">العنوان</label>
-                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", id = "InputSubject", style = "height: 50px;" } })
+                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", id = "InputSubject" } })
                             @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
                         </div>
-                        <br />
-                    </div>
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-6">
+
+                        <div class="form-group">
                             <label for="InputMessage" class="control-label">الاستفسار</label>
                             @Html.TextAreaFor(model => model.Message, new { @class = "form-control", rows = "6", id = "InputMessage", style = "resize: vertical; height: 150px;" })
                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                         </div>
-                    </div>
-                    <br />
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary btn-block">
+
+                        <br />
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-submit">
                                 أرسل الاستفسار
                             </button>
                         </div>
                     </div>
+                    <div class="col-md-6 p-0 d-flex align-items-center">
+                        <img src="~/Content/images/product/Screenshot_2024-08-20_202937.png" alt="Contact Us" class="img-fluid rounded-end" style="width:560px; height:390px;">
+                    </div>
                 </div>
-                <!-- contact-form-wrapper -->
+                <!-- contact-wrapper -->
             </div>
             <!-- container -->
         </section>
     </center>
 }
-
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
@@ -81,5 +173,6 @@
                 icon: 'success',
                 confirmButtonText: 'حسنًا'
             });
-        }</script>
+        }
+    </script>
 }

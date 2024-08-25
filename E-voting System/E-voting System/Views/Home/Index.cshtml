@@ -1,4 +1,99 @@
-﻿@{
+﻿@model IEnumerable<E_voting_System.Models.ElectionSchedule>
+
+@{
+    ViewBag.Title = "Election Schedule";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+    var dateNOW = DateTime.Now;
+    var Dates = Session["electionDates"] as E_voting_System.Models.ElectionSchedule;
+
+    var startDateOfElection = Dates?.Start_Date_Of_Election;
+    var endDateOfElection = Dates?.End_Date_Of_Election;
+
+    var electionStartDateStr = startDateOfElection.HasValue
+        ? startDateOfElection.Value.ToString("yyyy-MM-ddTHH:mm:ss")
+        : "1970-01-01T00:00:00";
+}
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function startCountdown(elementId, startDateStr) {
+            const countdownElement = document.getElementById(elementId);
+            const targetDate = new Date(startDateStr).getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeRemaining = targetDate - now;
+
+                if (timeRemaining < 0) {
+                    countdownElement.innerHTML = "<div class='countdown-card'>انتهى الوقت!</div>";
+                    return;
+                }
+
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `
+                    <div class='countdown-card'><span>${days}</span><label>أيام</label></div>
+                    <div class='countdown-card'><span>${hours}</span><label>ساعات</label></div>
+                    <div class='countdown-card'><span>${minutes}</span><label>دقائق</label></div>
+                    <div class='countdown-card'><span>${seconds}</span><label>ثواني</label></div>
+                `;
+            }
+
+            // Initial call
+            updateCountdown();
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Pass the start date string to the countdown function
+        const electionStartDateStr = '@electionStartDateStr';
+        startCountdown('election-timer', electionStartDateStr);
+    });
+</script>
+<style>
+    .custom-container {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .custom-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+        .custom-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+    .custom-text {
+        flex: 2;
+    }
+
+        .custom-text h2 {
+            margin-top: 0;
+            color: #153448;
+        }
+
+        .custom-text p {
+            margin: 10px 0;
+            color: #3C5B6F;
+            line-height: 1.6;
+        }
+</style>
+
+@{
     ViewBag.Title = "NVS";
     Layout = "~/Views/Shared/_Layout.cshtml"; // assuming your layout file is _Layout.cshtml
 }
@@ -12,261 +107,401 @@
 <link rel="stylesheet" href="~/Content/css/slick.css" />
 <link href="~/Content/css/tooplate-little-fashion.css" rel="stylesheet">
 
-<style>
-    .section-padding {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+
+
+@*<h2>Slider Example</h2>*@
+<div id="mySlider" class="slider">
+    <br /><br /><br /><br /><br /><br /><br />
+    <!-- Slider container -->
+    <div class="slider-container">
+        <img src="~/Content/assets/images/Screenshot 2024-08-21 194929.png" alt="Los Angeles" style="height:650px">
+        <img src="~/Content/assets/images/Screenshot 2024-08-21 194753.png" alt="Chicago" style="height:650px">
+        <img src="~/Content/assets/images/Screenshot 2024-08-21 195022.png" alt="New York" style="height:650px">
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left slider-control" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="right slider-control" onclick="moveSlide(1)">&#10095;</a>
+</div>
+<br />
+<br />
+
+
+
+<center>
+    <div class="row text-center">
+        <h3> نظام الاقتراع الوطني </h3><center>
+            <div class="line2"></div>
+            <div class="line"></div>
+        </center>
+    </div>
+    <br /><br />
+
+    <div style="display: flex; flex-direction: column; align-items: center; padding: 10px;   background-color: white; width: 100%;">
+        <div style="flex: 1; margin-bottom: 10px;">
+            <p style="width: 95%; max-width: 800px; margin: 10px auto; color: #555; text-align: center;">
+                الانتخابات الإلكترونية في الأردن تمثل خطوة متقدمة نحو تعزيز الديمقراطية وتسهيل مشاركة المواطنين في العملية الانتخابية. يتيح النظام الإلكتروني للناخبين الإدلاء بأصواتهم بسهولة وأمان عبر الإنترنت، مما يقلل من التحديات اللوجستية ويعزز من نزاهة وشفافية الانتخابات. يسعى الأردن من خلال هذه المبادرة إلى مواكبة التطورات التكنولوجية وتقديم تجربة انتخابية متقدمة تلبي تطلعات المواطنين وتضمن تمثيل إرادتهم بدقة.
+            </p>
+        </div>
+        <img src="~/Content/images/product/Screenshot 2024-08-21 210645.png" alt="Image" style="width: 70%; height: auto; object-fit: cover; border-radius: 5px;">
+    </div>
+    <br /><br /> <br />
+    <br />
+    <br />
+    <center>
+        <div class="row text-center">
+            <h3> الوقت الباقي لبدء الانتخابات النيابية 2024</h3><center>
+                <div class="line2"></div>
+                <div class="line"></div>
+            </center>
+        </div>
+        <div class="container mt-4">
+            <div class="col-md-6 mb-4">
+                <div id="election-timer" class="countdown-timer">
+                    <div class="countdown-card light-red">
+                        <span id="days">00</span>
+                        <label>Days</label>
+                    </div>
+                    <div class="countdown-card light-green">
+                        <span id="hours">00</span>
+                        <label>Hours</label>
+                    </div>
+                    <div class="countdown-card black">
+                        <span id="minutes">00</span>
+                        <label>Minutes</label>
+                    </div>
+                    <div class="countdown-card white">
+                        <span id="seconds">00</span>
+                        <label>Seconds</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </center>
+
+    <br />
+    <br />
+    <br />
+    <center>
+        <div class="row text-center">
+            <h3> لماذا نظام الاقتراع الوطني ؟ </h3><center>
+                <div class="line2"></div>
+                <div class="line"></div>
+            </center>
+        </div>
+        <br /><br />
+
+        <div class="custom-container" style="display: flex;">
+            <div class="custom-image" style="width: 50vw;">
+                <img src="~/Content/images/product/139996C5-5A04-4DC8-92C8-149728480269.jpg" alt="صورة" style="width: 100%; height: auto;">
+            </div>
+            <div class="custom-text" style="flex-grow: 1; font-size: 0.8em; padding: 1rem;">
+                <h4>رؤيتنا</h4>
+                <p>نطمح إلى تحقيق نظام اقتراع وطني شامل في الأردن يعكس إرادة الشعب بأعلى مستويات الشفافية والنزاهة، ويعزز من مكانة الأردن كدولة ديمقراطية رائدة في المنطقة.</p>
+
+                <h4>رسالتنا</h4>
+                <p>تقديم نظام اقتراع متطور في الأردن يتيح لجميع المواطنين ممارسة حقهم الانتخابي بسهولة وأمان، مع ضمان نزاهة وشفافية العملية الانتخابية من خلال تبني أفضل الممارسات العالمية والتكنولوجيا الحديثة.</p>
+
+
+            </div>
+        </div> <br />
+        <br />
+        <br />
+        <div class="row text-center">
+            <h3> الانتخابات التي أشرفنا عليها</h3><center>
+                <div class="line2"></div>
+                <div class="line"></div>
+            </center>
+        </div>
+        <section class="featured-product section-padding">
+            <div class="container" style="direction:rtl;">
+                <center>
+
+                </center>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                        <div class="product-thumb">
+                            <a href="product-detail.html">
+                                <img src="~/Content/assets/jordan/vote1.jpeg" class="img-fluid product-image" alt="انتخابات غرفة الصناعة والتجارة">
+                            </a>
+                            <div class="product-top d-flex">
+                                <span class="product-alert me-auto">انتخابات جديدة</span>
+                                <a href="#" class="bi-heart-fill product-icon"></a>
+                            </div>
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h5 class="product-title mb-0">
+                                        <a href="product-detail.html" class="product-title-link">انتخابات غرفة الصناعة والتجارة</a>
+                                    </h5>
+                                    <p class="product-p">نحن أشرفنا على هذه الانتخابات لضمان نزاهتها وشفافيتها.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                        <div class="product-thumb">
+                            <a href="product-detail.html">
+                                <img src="~/Content/assets/jordan/vote3.jpg" class="img-fluid product-image" alt="الانتخابات البلدية واللامركزية">
+                            </a>
+                            <div class="product-top d-flex">
+                                <span class="product-alert">انتخابات سابقة</span>
+                                <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
+                            </div>
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h5 class="product-title mb-0">
+                                        <a href="product-detail.html" class="product-title-link">الانتخابات البلدية واللامركزية</a>
+                                    </h5>
+                                    <p class="product-p">كانت هذه الانتخابات تحت إشرافنا لضمان تحقيق تمثيل عادل.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="product-thumb">
+                            <a href="product-detail.html">
+                                <img src="~/Content/assets/jordan/vote4.jpg" class="img-fluid product-image" alt="الانتخابات النيابية">
+                            </a>
+                            <div class="product-top d-flex">
+                                <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
+                            </div>
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h5 class="product-title mb-0">
+                                        <a href="product-detail.html" class="product-title-link">الانتخابات النيابية</a>
+                                    </h5>
+                                    <p class="product-p">أشرفنا على هذه الانتخابات لضمان سيرها بسلاسة ونزاهة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="~/Content/js/jquery.min.js"></script>
+        <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+        <script src="~/Content/js/Headroom.js"></script>
+        <script src="~/Content/js/jQuery.headroom.js"></script>
+        <script src="~/Content/js/slick.min.js"></script>
+        <script src="~/Content/js/custom.js"></script>
+
+        <style>
+            .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+                --bs-gutter-x: -0.5rem;
+                padding-right: calc(var(--bs-gutter-x)*)
+            }
+
+            .section-padding {
+                padding-top: 7rem;
+                padding-bottom: 7rem;
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+
+            .countdown-timer {
+                font-size: 1.5rem;
+                padding: 20px;
+                background-color: #333;
+                color: #0f0; /* Classic digital clock color */
+                border-radius: 10px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+            }
+
+            .countdown-card {
+                background-color: #444;
+                border: 1px solid #555;
+                border-radius: 5px;
+                padding: 10px;
+                width: 100px;
+            }
+
+                .countdown-card span {
+                    display: block;
+                    font-size: 2.5rem; /* Larger numbers for visibility */
+                }
+
+                .countdown-card label {
+                    display: block;
+                    font-size: 1rem;
+                    margin-top: 5px;
+                }
+
+            .light-red {
+                color: lightcoral;
+            }
+
+            .light-green {
+                color: lightgreen;
+            }
+
+            .black {
+                color: black;
+            }
+
+            .white {
+                color: white;
+            }
+
+            .slider {
+                position: relative;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .slider-container {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+
+                .slider-container img {
+                    width: 100%;
+                    flex-shrink: 0;
+                    height: 400px; /* Adjust the height as needed */
+                    object-fit: cover;
+                }
+
+            .slider-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                padding: 16px;
+                cursor: pointer;
+                z-index: 1000;
+            }
+
+            .left {
+                left: 0;
+            }
+
+            .right {
+                right: 0;
+            }
+
+            body, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Cairo', sans-serif;
+            }
+
+            .line {
+                border-bottom: 3px solid red;
+                margin-top: 3px;
+                width: 70%;
+            }
+
+            .line2 {
+                border-bottom: 3px solid darkgreen;
+                margin-top: 3px;
+                width: 60%;
+            }
+
+            .countdown-timer {
+                font-size: 2rem; /* Increase font size for better visibility */
+                padding: 30px;
+                background-color: #333;
+                color: #fff; /* White text for better readability */
+                border-radius: 15px;
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+            }
+
+            .countdown-card {
+                background-color: #444;
+                border: 1px solid #555;
+                border-radius: 10px;
+                padding: 15px;
+                width: 120px; /* Slightly wider for better spacing */
+                transition: transform 0.3s; /* Add transition for hover effect */
+            }
+
+                .countdown-card:hover {
+                    transform: scale(1.1); /* Scale up on hover */
+                }
+
+                .countdown-card span {
+                    display: block;
+                    font-size: 3rem; /* Larger numbers for visibility */
+                }
+
+                .countdown-card label {
+                    display: block;
+                    font-size: 1.2rem; /* Slightly larger labels */
+                    margin-top: 5px;
+                }
+
+            .light-red {
+                color: #ff6347; /* Tomato color */
+            }
+
+            .light-green {
+                color: #32cd32; /* Lime green */
+            }
+
+            .black {
+                color: #000; /* Black */
+            }
+
+            .white {
+                color: #fff; /* White */
+            }
+        </style>
+        @* ------------------------------------------------------------------------------ *@
+        <script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+        const sliderContainer = document.querySelector('.slider-container');
+        const totalSlides = document.querySelectorAll('.slider-container img').length;
+        const slideWidth = sliderContainer.clientWidth;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+
+        sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
-</style>
-<!-- Page Content -->
-<section class="slick-slideshow">
-    <div class="slick-custom">
-        <img src="~/Content/assets/jordan/hasheme.jpg" class="img-fluid" alt="صورة نظام الاقتراع الوطني">
-        <div class="slick-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-10">
-                        <h1 class="slick-title">نظام الاقتراع الوطني</h1>
-                        <p class="lead text-white mt-lg-3 mb-lg-5">
-                            نظام إلكتروني للتصويت عبر الإنترنت في المملكة الأردنية الهاشمية، يتيح للمواطنين التصويت بسهولة وأمان.
-                        </p>
-                        <a href="@Url.Action("About", "Home")" class="btn custom-btn">اعرف المزيد</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
+    // Auto slide every 5 seconds
+    setInterval(() => moveSlide(1), 5000);
 
+     // Parse the start date from Razor variable
+ var startDateOfElection = new Date('@electionStartDateStr');
 
-    <div class="slick-custom">
-        <img src="~/Content/assets/jordan/amman.jpg" class="img-fluid" alt="">
-        <div class="slick-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-10">
-                        <h1 class="slick-title">التصويت الإلكتروني في الأردن</h1>
-                        <p class="lead text-white mt-lg-3 mb-lg-5">
-                            نظام الاقتراع الوطني هو نظام اقتراع إلكتروني مبتكر يهدف إلى تسهيل عملية التصويت عبر الإنترنت في المملكة الأردنية الهاشمية. يتيح هذا النظام للمواطنين ممارسة حقوقهم الدستورية في التصويت بشكل آمن وشفاف، مما يعزز من المشاركة الديمقراطية ويضمن نزاهة العملية الانتخابية.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+ function updateTimer() {
+     var now = new Date().getTime();
+     var distance = startDateOfElection - now;
 
+     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    <div class="slick-custom">
-        <img src="~/Content/assets/jordan/city.jpg" class="img-fluid" alt="">
-        <div class="slick-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-10">
-                        <h1 class="slick-title">سياسات الانتخاب في الأردن</h1>
-                        <p class="lead text-white mt-lg-3 mb-lg-5">
-                            نظام الاقتراع الوطني يلتزم بأعلى معايير النزاهة والشفافية لضمان أن كل صوت يتم احتسابه بدقة. يتم تطبيق سياسات صارمة لحماية خصوصية الناخبين ومنع التلاعب أو الاحتيال في العملية الانتخابية، مع التأكيد على الشفافية في كل خطوة.
-                        </p>
-                        <a href="@Url.Action("Policy", "Home")" class="btn custom-btn">اقرأ السياسات</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     document.getElementById("days").innerHTML = days;
+     document.getElementById("hours").innerHTML = hours;
+     document.getElementById("minutes").innerHTML = minutes;
+     document.getElementById("seconds").innerHTML = seconds;
 
-</section>
+     // If the countdown is finished, clear the interval
+     if (distance < 0) {
+         clearInterval(timerInterval);
+         document.getElementById("election-timer").innerHTML = "Election Started";
+     }
+ }
 
-<section class="about section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="mb-5">نظام <span>الاقتراع</span> الأردني</h2>
-            </div>
-
-            <div class="col-lg-2 col-12 mt-auto mb-auto">
-                <ul class="nav nav-pills mb-5 mx-auto justify-content-center align-items-center" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">كلمات الملك</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-youtube-tab" data-bs-toggle="pill" data-bs-target="#pills-youtube" type="button" role="tab" aria-controls="pills-youtube" aria-selected="true">كيف يعمل النظام؟</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-skill" aria-selected="false">قدرات النظام</button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-10 col-12">
-                <div class="tab-content mt-2" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <img src="~/Content/assets/jordan/king.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-5 col-12">
-                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                    <h4 class="mb-3">كلمات  من   جلالة  الملك </h4>
-                                    <p>
-                                        "من الناس مَن ينظر إلى التاريخ من زاويته الضيّقة فيفترض أن مسار الأمور كما نراه الآن هو نفسه كما كان في الأزمنة الغابرة. لكن علينا ألا ننسى أن التقدم الاقتصادي والتكنولوجي الذي أحرزه الغرب هو تطورٌ حديث نسبياً جاءَ نتيجة الحركة التحديثية المدهشة وما تبعها من ازدهار في أوروبا وأميركا خلال القرنين التاسع عشر والعشرين. أما من يلقي نظرة أبعدَ وأكثر عمقاً فإن الأمور تبدو له مختلفة إلى حد كبير. ففي العصور الوسطى، يوم كانت واشنطن مجرد مستنقع لا أكثر، كانت مدن القدس وبغداد ودمشق العظيمة المراكزَ الرياديةَ العالمية في مجالات التعلُّم والمعرفة. لكن مع مرور الزمن اتخذ التاريخ وجهةً أخرى ومال نحو الغرب. وبحلول القرن العشرين كان العالم العربي قد تراجع إلى الصفوف الخلفية"
-                                    </p>
-                                    <p class="text-end">- الملك عبدالله الثاني ابن الحسين</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
-                        <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/-Ri2DOnbaoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-5 col-12">
-                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                    <h4 class="mb-3">كيف يعمل النظام</h4>
-                                    <p>نظام الاقتراع الوطني في الأردن هو منصة إلكترونية تم تطويرها لضمان سير عملية التصويت بطريقة شفافة وعادلة. يتيح النظام للمواطنين المشاركة في الانتخابات بسهولة عبر الإنترنت، مع الحفاظ على سرية وخصوصية أصواتهم.</p>
-                                    <p>يعمل النظام من خلال تقنيات متطورة للتحقق من هوية الناخبين وتسجيل أصواتهم بشكل آمن، مما يضمن أن كل مواطن يمكنه المشاركة في بناء مستقبل بلده.</p>
-                                    <div class="mt-2 mt-lg-auto">
-                                        <a href="@Url.Action("ContactForm", "ContactForms")" class="custom-link mb-2">
-                                            تواصل معنا
-                                            <i class="bi-arrow-right ms-2"></i>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="tab-pane fade" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
-                        <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <img src="~/Content/assets/jordan/vote.jpg" class="img-fluid" alt="Voting Image">
-                            </div>
-                            <div class="col-lg-5 col-12">
-                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                    <h4 class="mb-3">قدرات نظام الاقتراع</h4>
-                                    <p>نظام الاقتراع الإلكتروني يتمتع بقدرات متقدمة لضمان شفافية وفعالية العملية الانتخابية. يوفر النظام أمانًا عاليًا لحماية بيانات الناخبين وضمان نزاهة التصويت.</p>
-                                    <p>يتيح النظام للناخبين إمكانية التصويت بسهولة عبر الإنترنت من أي مكان في المملكة الأردنية الهاشمية، مما يعزز من مشاركة المواطنين في الانتخابات.</p>
-                                     
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<section class="front-product">
-    <div class="container-fluid p-0">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-12">
-                <img src="~/Content/assets/jordan/jordan3.jpg" class="img-fluid" alt="Jordan Election">
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="px-5 py-5 py-lg-0">
-                    <h2 class="mb-4"><span>الانتخابات</span> الأردنية</h2>
-                    <p class="lead mb-4">تعد الانتخابات الأردنية من أهم الأحداث الديمقراطية في المملكة، حيث تتيح للمواطنين فرصة التعبير عن رأيهم والمشاركة في صناعة القرار. يُدار هذا النظام الانتخابي بشفافية وأمان لضمان حقوق الناخبين ونزاهة العملية الانتخابية.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="featured-product section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="mb-5">الانتخابات التي أشرفنا عليها</h2>
-            </div>
-
-            <div class="col-lg-4 col-12 mb-3">
-                <div class="product-thumb">
-                    <a href="product-detail.html">
-                        <img src="~/Content/assets/jordan/vote1.jpeg" class="img-fluid product-image" alt="انتخابات غرفة الصناعة والتجارة">
-                    </a>
-                    <div class="product-top d-flex">
-                        <span class="product-alert me-auto">انتخابات جديدة</span>
-                        <a href="#" class="bi-heart-fill product-icon"></a>
-                    </div>
-                    <div class="product-info d-flex">
-                        <div>
-                            <h5 class="product-title mb-0">
-                                <a href="product-detail.html" class="product-title-link">انتخابات غرفة الصناعة والتجارة</a>
-                            </h5>
-                            <p class="product-p">نحن أشرفنا على هذه الانتخابات لضمان نزاهتها وشفافيتها.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-12 mb-3">
-                <div class="product-thumb">
-                    <a href="product-detail.html">
-                        <img src="~/Content/assets/jordan/vote3.jpg" class="img-fluid product-image" alt="الانتخابات البلدية واللامركزية">
-                    </a>
-                    <div class="product-top d-flex">
-                        <span class="product-alert">انتخابات سابقة</span>
-                        <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                    </div>
-                    <div class="product-info d-flex">
-                        <div>
-                            <h5 class="product-title mb-0">
-                                <a href="product-detail.html" class="product-title-link">الانتخابات البلدية واللامركزية</a>
-                            </h5>
-                            <p class="product-p">كانت هذه الانتخابات تحت إشرافنا لضمان تحقيق تمثيل عادل.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-12">
-                <div class="product-thumb">
-                    <a href="product-detail.html">
-                        <img src="~/Content/assets/jordan/vote4.jpg" class="img-fluid product-image" alt="الانتخابات النيابية">
-                    </a>
-                    <div class="product-top d-flex">
-                        <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                    </div>
-                    <div class="product-info d-flex">
-                        <div>
-                            <h5 class="product-title mb-0">
-                                <a href="product-detail.html" class="product-title-link">الانتخابات النيابية</a>
-                            </h5>
-                            <p class="product-p">أشرفنا على هذه الانتخابات لضمان سيرها بسلاسة ونزاهة.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- JAVASCRIPT FILES -->
-<script src="~/Content/js/jquery.min.js"></script>
-<script src="~/Content/js/bootstrap.bundle.min.js"></script>
-<script src="~/Content/js/Headroom.js"></script>
-<script src="~/Content/js/jQuery.headroom.js"></script>
-<script src="~/Content/js/slick.min.js"></script>
-<script src="~/Content/js/custom.js"></script>
-<style>
-    .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-        --bs-gutter-x: -0.5rem;
-        padding-right: calc(var(--bs-gutter-x)*)
-    }
-</style>
+ // Update the timer every second
+ var timerInterval = setInterval(updateTimer, 1000);
+        </script>

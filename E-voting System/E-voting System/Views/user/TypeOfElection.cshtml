@@ -1,4 +1,4 @@
-﻿ @{   ViewBag.Title = "نوع الانتخابات";
+﻿@{ ViewBag.Title = "نوع الانتخابات";
     string localListAction = ViewBag.localList_actionName as string;
     string partyListAction = ViewBag.PartyList_actionName as string;
     int circle_id = ViewBag.circle;
@@ -56,10 +56,26 @@
             max-width: 250px; /* Adjust the width as needed */
             height: auto;
         }
+
+        body, h2 {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .line {
+            border-bottom: 3px solid red;
+            margin-top: 3px;
+            width: 70%;
+        }
+
+        .line2 {
+            border-bottom: 3px solid darkgreen;
+            margin-top: 3px;
+            width: 60%;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        body, h1 {
             font-family: 'Cairo', sans-serif;
         }
     </style>
@@ -68,29 +84,28 @@
     <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
         <div class="container">
             <div class="card shadow-lg p-4 p-lg-5" style="border-radius: 10px;">
-                <div class="card-body" >
-                    <h2 class="text-center mb-4">نوع الانتخابات</h2>
-                    <div class="row">
+                <div class="card-body">
+                    <h1>نوع الانتخابات</h1><center><div class="line2"></div><div class="line"></div></center> <br /> <br />                  <div class="row">
                         <div class="col-md-6 mb-4">
                             @if (isLocalActive)
                             {
                                 <a href="@Url.Action("circles", "user", new {circleId = circle_id} )" class="card active-card">
-                                    <div class="card-body"  >
+                                    <div class="card-body">
                                         <!-- Add the image here -->
                                         <img src="~/Content/assets/images/local.jpg" alt="Local Election" class="img-fluid mb-3" />
-                                        <h5 class="card-title">الانتخابات المحلية</h5>
-                                        <p class="card-text">صوت لممثليك المحليين.</p>
+                                        <h5 class="card-title" style=" font-family: 'Cairo', sans-serif;">الانتخابات المحلية</h5>
+                                        <p class="card-text">صوت لممثليك المحليين</p>
                                     </div>
                                 </a>
                             }
                             else
                             {
                                 <div class="card inactive-card">
-                                    <div class="card-body"  >
+                                    <div class="card-body">
                                         <!-- Add the image here -->
                                         <img src="~/Content/assets/images/local.jpg" alt="Local Election" class="img-fluid mb-3" />
-                                        <h5 class="card-title">الانتخابات المحلية</h5>
-                                        <p class="card-text">صوت لممثليك المحليين.</p>
+                                        <h5 class="card-title" style=" font-family: 'Cairo', sans-serif;">الانتخابات المحلية</h5>
+                                        <p class="card-text">صوت لممثليك المحليين</p>
                                     </div>
                                 </div>
                             }
@@ -99,22 +114,22 @@
                             @if (isPartyActive)
                             {
                                 <a href="@Url.Action(partyListAction, "user")" class="card active-card">
-                                    <div class="card-body"  >
+                                    <div class="card-body">
                                         <!-- Add the image here -->
                                         <img src="~/Content/assets/images/party.jpg" alt="Party Election" class="img-fluid mb-3" />
-                                        <h5 class="card-title">الانتخابات الحزبية</h5>
-                                        <p class="card-text">صوت لممثلي حزبك.</p>
+                                        <h5 class="card-title" style=" font-family: 'Cairo', sans-serif;">الانتخابات الحزبية</h5>
+                                        <p class="card-text">صوت لممثلي حزبك</p>
                                     </div>
                                 </a>
                             }
                             else
                             {
                                 <div class="card inactive-card">
-                                    <div class="card-body"  >
+                                    <div class="card-body">
                                         <!-- Add the image here -->
                                         <img src="~/Content/assets/images/party.jpg" alt="Party Election" class="img-fluid mb-3" />
-                                        <h5 class="card-title">الانتخابات الحزبية</h5>
-                                        <p class="card-text">صوت لممثلي حزبك.</p>
+                                        <h5 class="card-title" style=" font-family: 'Cairo', sans-serif;">الانتخابات الحزبية</h5>
+                                        <p class="card-text">صوت لممثلي حزبك</p>
                                     </div>
                                 </div>
                             }
@@ -131,7 +146,7 @@
             if (areBothInactive) {
                 Swal.fire({
                     title: 'عملية التصويت مكتملة',
-                    text: 'لقد أكملت عملية التصويت الخاصة بك بالفعل. شكرا لك!',
+                    text: 'لقد أكملت عملية التصويت الخاصة بك بالفعل. شُكرًا لك!',
                     icon: 'info',
                     confirmButtonText: 'موافق'
                 });

@@ -1,36 +1,95 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
-<h2 class="text-center my-4" style="color: var(--bs-primary);">المناظرات</h2>
+<br />
+<br />
+<center> <h2 style=" font-family: 'Cairo', sans-serif;"> تقديم طلب مناظرة</h2><div class="line2"></div><div class="line"></div></center>
+<br />
+<br />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 @using (Html.BeginForm("Index", "Debates", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <style>
+        .form-image-container {
+            display: flex; /* Use Flexbox for horizontal layout */
+            align-items: flex-start; /* Align items at the start */
+            justify-content: space-between; /* Space between the form and image */
+            position: relative; /* Position relative for absolute children */
+            direction: rtl; /* Set text direction to RTL */
+        }
+
+        .line {
+            border-bottom: 3px solid red;
+            margin-top: 3px;
+            width: 80%;
+        }
+
+        .line2 {
+            border-bottom: 3px solid darkgreen;
+            margin-top: 3px;
+            width: 70%;
+        }
+
         .form-container {
-            text-align: end;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
-            display: flex;
-            justify-content: center;
+            flex: 1; /* Allow form to take available space */
+            margin-left: 20px; /* Space between form and image */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for form */
+            border-radius: 5px; /* Optional: add rounded corners */
+            padding: 20px; /* Optional: add padding */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
         }
 
-        .card {
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adding a softer shadow */
-            background-color: #f8f9fa; /* Light background color */
-            max-width: 600px; /* Limit the width of the form */
-            width: 100%;
-            padding: 1.5rem; /* Padding inside the card */
+        .image-container {
+            flex: 1; /* Allow image container to take available space */
+            display: flex; /* Center image vertically */
+            align-items: center; /* Center image vertically */
+            justify-content: center; /* Center image horizontally */
         }
 
-        .card-body {
-            padding: 2rem; /* Adding padding */
+            .image-container img {
+                max-width: 100%; /* Ensure image is responsive */
+                height: 575px;
+            }
+
+        .form-card {
+            background: transparent; /* Make form card background transparent */
+            border: none; /* Remove border */
+        }
+
+        .form-label {
+            text-align: right; /* Align labels to the right */
+        }
+
+        .form-control {
+            text-align: right; /* Align input text to the right */
+        }
+
+        .inline-inputs {
+            display: flex; /* Use Flexbox for horizontal layout */
+            justify-content: space-around; /* Space between the inputs */
+            flex-direction: column;
+        }
+
+        .inline-inputs-candidates {
+            display: flex; /* Use Flexbox for horizontal layout */
+            justify-content: flex-start;
+        }
+
+            .inline-inputs-candidates .form-control {
+                width: 95%; /* Width for the first candidate input */
+            }
+
+                .inline-inputs-candidates .form-control.list {
+                    width: 95%; /* Width for the candidate list input */
+                }
+
+        .inline-inputs .form-control {
+            width: 90%; /* Adjust width to fit in one line */
         }
 
         .btn-custom {
-            background-color: var(--bs-primary);
+            background-color: #dc3545; /* Nice red color */
             color: white;
             border: none;
             padding: 0.5rem 2rem; /* Padding for the button */
@@ -39,66 +98,65 @@
         }
 
             .btn-custom:hover {
-                background-color: darkblue;
+                background-color: #c82333; /* Darker red for hover effect */
                 color: white;
-            }
-
-        .form-label {
-            font-weight: bold; /* Bold labels */
-            color: #495057; /* Dark gray color */
-        }
-
-        .form-control {
-            box-shadow: none; /* Remove default input shadow */
-            border-radius: 0.3rem; /* Slightly rounded input fields */
-            border: 1px solid #ced4da; /* Light border color */
-        }
-
-            .form-control:focus {
-                border-color: var(--bs-primary); /* Border color on focus */
-                box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Subtle shadow on focus */
             }
     </style>
 
-    <div class="container form-container">
-        <div class="card">
-            <div class="card-body">
-                <div class="mb-3">
-                    <label for="Circle_ID" class="form-label">رقم الدائرة</label>
-                    <input name="Circle_ID" type="text" class="form-control" id="Circle_ID">
+    <div class="container">
+        <div class="form-image-container">
+            <div class="form-container">
+                <div class="form-card">
+                    <div class="card-body">
+                        <div class="mb-3 inline-inputs">
+                            <div>
+                                <label for="Circle_ID" class="form-label">رقم الدائرة</label>
+                                <input name="Circle_ID" type="text" class="form-control" id="Circle_ID" dir="rtl">
+                            </div>
+                            <div>
+                                <label for="Date_Of_Debate" class="form-label">تاريخ المناظرة</label>
+                                <input name="Date_Of_Debate" type="date" class="form-control" id="Date_Of_Debate" dir="rtl">
+                            </div>
+                        </div>
+                        <div class="mb-3 inline-inputs">
+                            <label for="Topic" class="form-label">عنوان المناظرة</label>
+                            <input name="Topic" type="text" class="form-control" id="Topic" dir="rtl">
+                        </div>
+                        <div class="mb-3 inline-inputs-candidates">
+                            <div>
+                                <label for="First_Candidate" class="form-label">المرشح الأول</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input name="First_Candidate" type="text" class="form-control" id="First_Candidate" dir="rtl">
+                            </div>
+                            <div>
+                                <label for="First_Candidate_List" class="form-label">رقم قائمة المرشح الأول</label>
+                                <input name="First_Candidate_List" type="text" class="form-control list" id="First_Candidate_List" dir="rtl">
+                            </div>
+                        </div>
+                        <div class="mb-3 inline-inputs-candidates">
+                            <div>
+                                <label for="Second_Candidate" class="form-label">المرشح الثاني</label>&nbsp;&nbsp;&nbsp;
+                                <input name="Second_Candidate" type="text" class="form-control" id="Second_Candidate" dir="rtl">
+                            </div>
+                            <div>
+                                <label for="Second_Candidate_List" class="form-label">رقم قائمة المرشح الثاني</label>
+                                <input name="Second_Candidate_List" type="text" class="form-control list" id="Second_Candidate_List" dir="rtl">
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-custom" style="font-family: 'Cairo', sans-serif;" onclick="submitForm()">تقديم الطلب</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="Date_Of_Debate" class="form-label">تاريخ المناقشة</label>
-                    <input name="Date_Of_Debate" type="date" class="form-control" id="Date_Of_Debate">
-                </div>
-                <div class="mb-3">
-                    <label for="Topic" class="form-label">عنوان المناظرة</label>
-                    <input name="Topic" type="text" class="form-control" id="Topic">
-                </div>
-                <div class="mb-3">
-                    <label for="First_Candidate" class="form-label">المرشح الأول</label>
-                    <input name="First_Candidate" type="text" class="form-control" id="First_Candidate">
-                </div>
-                <div class="mb-3">
-                    <label for="First_Candidate_List" class="form-label">رقم قائمة المرشح الأول</label>
-                    <input name="First_Candidate_List" type="text" class="form-control" id="First_Candidate_List">
-                </div>
-                <div class="mb-3">
-                    <label for="Second_Candidate" class="form-label">المرشح الثاني</label>
-                    <input name="Second_Candidate" type="text" class="form-control" id="Second_Candidate">
-                </div>
-                <div class="mb-3">
-                    <label for="Second_Candidate_List" class="form-label">رقم قائمة المرشح الثاني</label>
-                    <input name="Second_Candidate_List" type="text" class="form-control" id="Second_Candidate_List">
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-custom" onclick="submitForm()">تقديم الطلب</button>
-                </div>
+            </div>
+            <div class="image-container">
+                <img src="~/Content/images/product/Screenshot_2024-08-20_224351.png" alt="Image Description">
             </div>
         </div>
     </div>
 }
 @section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function submitForm() {
@@ -107,12 +165,7 @@
                 text: 'تم تقديم بيانات المترشحين بنجاح.',
                 icon: 'success',
                 confirmButtonText: 'حسنًا'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('candidateForm').submit();
-                }
-            });
+            }); // edit the timing
         }
     </script>
-
 }

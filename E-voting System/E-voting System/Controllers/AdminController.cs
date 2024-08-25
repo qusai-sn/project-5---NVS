@@ -21,20 +21,32 @@ namespace E_voting_System.Controllers
         {
             var totalUsers = db.USERS.Count();
             var totalApprovedAds = db.ElectionAdvertisements.Count(a => a.Status == "approved");
-            var totalLocalVotes = db.USERS.Sum(u => u.local_Vote );
-            var totalPartyVotes = db.USERS.Sum(u => u.Party_Vote );
+            var totalLocalVotes = db.USERS.Sum(u => u.local_Vote);
+            var totalPartyVotes = db.USERS.Sum(u => u.Party_Vote);
             var numberOfAds = db.ElectionAdvertisements.Count();
             var numberOfPosts = db.ElectionPosts.Count();
+
+            // Calculate total votes for each circle
+            var circle1Votes = db.USERS.Where(u => u.Circle_ID == 1).Sum(u => u.local_Vote + u.Party_Vote);
+            var circle2Votes = db.USERS.Where(u => u.Circle_ID == 2).Sum(u => u.local_Vote + u.Party_Vote);
+            var circle3Votes = db.USERS.Where(u => u.Circle_ID == 3).Sum(u => u.local_Vote + u.Party_Vote);
 
             ViewBag.TotalUsers = totalUsers;
             ViewBag.TotalApprovedAds = totalApprovedAds;
             ViewBag.TotalLocalVotes = totalLocalVotes;
             ViewBag.TotalPartyVotes = totalPartyVotes;
+            ViewBag.TotalVotes = totalLocalVotes + totalPartyVotes;
             ViewBag.NumberOfAds = numberOfAds;
             ViewBag.NumberOfPosts = numberOfPosts;
 
+            ViewBag.Circle1Votes = circle1Votes;
+            ViewBag.Circle2Votes = circle2Votes;
+            ViewBag.Circle3Votes = circle3Votes;
+
             return View();
         }
+
+
 
         public ActionResult Lists()
         {
@@ -103,7 +115,6 @@ namespace E_voting_System.Controllers
                 throw; // Re-throw the exception to handle it in the calling method
             }
         }
-
 
         [HttpPost]
         public ActionResult Approve(int listId, string message)
@@ -184,6 +195,5 @@ namespace E_voting_System.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
-
     }
 }

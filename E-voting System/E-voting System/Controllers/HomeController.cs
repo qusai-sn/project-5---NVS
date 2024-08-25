@@ -16,6 +16,7 @@ namespace E_voting_System.Controllers
             var record = db.ElectionSchedules.Find(1);
 
             Session["electionDates"] = record;
+            Session.Timeout = 50;
 
             return View();
         }

@@ -1,14 +1,20 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-    ViewBag.Title = " لوحة التحكم ";
+    ViewBag.Title = "لوحة التحكم";
 }
 
+<!-- Include the necessary styles and scripts for the chart -->
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/charts/chart-4/assets/css/chart-4.css">
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ 
 <div id="root">
     <div class="container pt-5">
         <!-- بطاقات لوحة التحكم -->
-        <div class="row align-items-stretch">
+        <div class="row align-items-stretch mb-4">
             <!-- بطاقة إجمالي المستخدمين -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         إجمالي المستخدمين
@@ -22,7 +28,7 @@
             </div>
 
             <!-- بطاقة الإعلانات الموافق عليها -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         الإعلانات الموافق عليها
@@ -36,7 +42,7 @@
             </div>
 
             <!-- بطاقة إجمالي الأصوات المحلية -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         إجمالي الأصوات المحلية
@@ -50,7 +56,7 @@
             </div>
 
             <!-- بطاقة إجمالي أصوات الأحزاب -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         إجمالي أصوات الأحزاب
@@ -64,7 +70,7 @@
             </div>
 
             <!-- بطاقة عدد الإعلانات -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         عدد الإعلانات
@@ -78,7 +84,7 @@
             </div>
 
             <!-- بطاقة عدد المنشورات -->
-            <div class="c-dashboardInfo col-lg-4 col-md-6">
+            <div class="c-dashboardInfo col-lg-4 col-md-6 mb-4">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
                         عدد المنشورات
@@ -91,100 +97,215 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<style>
-    .c-dashboardInfo {
-        margin-bottom: 15px;
-    }
+        <!-- Chart Section -->
+        <!-- Charts Section -->
+        <section class="py-3 py-md-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Chart 1: التصويت حسب الدائرة -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card widget-card border-light shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-block d-sm-flex align-items-center justify-content-between mb-3">
+                                    <div class="mb-3 mb-sm-0">
+                                        <h5 class="card-title widget-card-title">التصويت حسب الدائرة</h5>
+                                    </div>
+                                </div>
+                                <div id="bsb-chart-4"></div>
+                            </div>
+                        </div>
+                    </div>
 
-        .c-dashboardInfo .wrap {
-            background: #ffffff;
-            box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 7px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 40px 25px 20px;
-            height: 100%;
-        }
+                    <!-- Chart 2: إجمالي الأصوات والحزب والمحلي -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card widget-card border-light shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-block d-sm-flex align-items-center justify-content-between mb-3">
+                                    <div class="mb-3 mb-sm-0">
+                                        <h5 class="card-title widget-card-title">إجمالي الأصوات والحزب والمحلي</h5>
+                                    </div>
+                                    <div>
+                                        <select class="form-select text-secondary border-light-subtle">
+                                            <option value="1">شهر</option>
+                                            <option value="2">أسبوع</option>
+                                            <option value="3">يوم</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="bsb-chart-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    .c-dashboardInfo__title,
-    .c-dashboardInfo__subInfo {
-        color: #6c6c6c;
-        font-size: 1.18em;
-    }
+        <!-- Scripts for Charts -->
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Chart 1: التصويت حسب الدائرة
+        var options1 = {
+            series: [@ViewBag.Circle1Votes, @ViewBag.Circle2Votes, @ViewBag.Circle3Votes],
+            chart: {
+                type: 'donut',
+                height: 350
+            },
+            labels: ['الدائرة 1', 'الدائرة 2', 'الدائرة 3'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
 
-    .c-dashboardInfo span {
-        display: block;
-    }
+        var chart1 = new ApexCharts(document.querySelector("#bsb-chart-4"), options1);
+        chart1.render();
 
-    .c-dashboardInfo__count {
-        font-weight: 600;
-        font-size: 2.5em;
-        line-height: 64px;
-        color: #323c43;
-    }
+        // Chart 2: إجمالي الأصوات والحزب والمحلي
+        var options2 = {
+            series: [{
+                name: 'الأصوات الإجمالية',
+                data: [@ViewBag.TotalVotes]
+            }, {
+                name: 'أصوات الحزب',
+                data: [@ViewBag.TotalPartyVotes]
+            }, {
+                name: 'الأصوات المحلية',
+                data: [@ViewBag.TotalLocalVotes]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: ['الإحصاءات']
+            },
+            yaxis: {
+                title: {
+                    text: 'عدد الأصوات'
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val + " صوت";
+                    }
+                }
+            }
+        };
 
-    .c-dashboardInfo .wrap:after {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10px;
-        content: "";
-    }
+        var chart2 = new ApexCharts(document.querySelector("#bsb-chart-5"), options2);
+        chart2.render();
+    });
+        </script>
 
-    .c-dashboardInfo:nth-child(1) .wrap:after {
-        background: linear-gradient(82.59deg, #00c48c 0%, #00a173 100%);
-    }
 
-    .c-dashboardInfo:nth-child(2) .wrap:after {
-        background: linear-gradient(81.67deg, #0084f4 0%, #1a4da2 100%);
-    }
 
-    .c-dashboardInfo:nth-child(3) .wrap:after {
-        background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
-    }
+        <style>
+            .c-dashboardInfo {
+                margin-bottom: 15px;
+            }
 
-    .c-dashboardInfo:nth-child(4) .wrap:after {
-        background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
-    }
+                .c-dashboardInfo .wrap {
+                    background: #ffffff;
+                    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+                    border-radius: 7px;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 40px 25px 20px;
+                    height: 100%;
+                }
 
-    .c-dashboardInfo:nth-child(5) .wrap:after {
-        background: linear-gradient(82.59deg, #00c48c 0%, #00a173 100%);
-    }
+            .c-dashboardInfo__title,
+            .c-dashboardInfo__subInfo {
+                color: #6c6c6c;
+                font-size: 1.18em;
+            }
 
-    .c-dashboardInfo:nth-child(6) .wrap:after {
-        background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
-    }
+            .c-dashboardInfo span {
+                display: block;
+            }
 
-    .c-dashboardInfo__title svg {
-        color: #d7d7d7;
-        margin-left: 5px;
-    }
+            .c-dashboardInfo__count {
+                font-weight: 600;
+                font-size: 2.5em;
+                line-height: 64px;
+                color: #323c43;
+            }
 
-    .MuiSvgIcon-root-19 {
-        fill: currentColor;
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        font-size: 24px;
-        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        user-select: none;
-        flex-shrink: 0;
-    }
+            .c-dashboardInfo .wrap:after {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 10px;
+                content: "";
+            }
 
-    table.table {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 7px;
-    }
+            .c-dashboardInfo:nth-child(1) .wrap:after {
+                background: linear-gradient(82.59deg, #00c48c 0%, #00a173 100%);
+            }
 
-    .badge {
-        font-size: 14px;
-        padding: 5px 10px;
-        border-radius: 20px;
-    }
-</style>
+            .c-dashboardInfo:nth-child(2) .wrap:after {
+                background: linear-gradient(81.67deg, #0084f4 0%, #1a4da2 100%);
+            }
+
+            .c-dashboardInfo:nth-child(3) .wrap:after {
+                background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
+            }
+
+            .c-dashboardInfo:nth-child(4) .wrap:after {
+                background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
+            }
+
+            .c-dashboardInfo:nth-child(5) .wrap:after {
+                background: linear-gradient(82.59deg, #00c48c 0%, #00a173 100%);
+            }
+
+            .c-dashboardInfo:nth-child(6) .wrap:after {
+                background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
+            }
+
+            .c-dashboardInfo__title svg {
+                color: #d7d7d7;
+                margin-left: 5px;
+            }
+
+            .MuiSvgIcon-root-19 {
+                fill: currentColor;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                font-size: 24px;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                user-select: none;
+                flex-shrink: 0;
+            }
+        </style>

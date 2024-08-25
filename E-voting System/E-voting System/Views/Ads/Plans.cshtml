@@ -4,19 +4,37 @@
 
 <section id="pricing" class="pricing-content section-padding">
     <div class="container">
-        <div class="section-title text-center"><br /><br />
-            <h2>خطط الانتخابات</h2>
+        <div class="section-title text-center">
+            <br /><br />
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+            <style>
+                body, h1, h2, h3, h4, h5, h6 {
+                    font-family: 'Cairo', sans-serif;
+                }
+
+                .line {
+                    border-bottom: 3px solid red;
+                    margin-top: 3px;
+                    width: 70%;
+                }
+
+                .line2 {
+                    border-bottom: 3px solid darkgreen;
+                    margin-top: 3px;
+                    width: 60%;
+                }
+            </style>
+            <h1> خطط الإعلانات</h1><center><div class="line2"></div><div class="line"></div></center>
             <br />
-            <p>
-                اختر الخطة التي تناسب احتياجاتك للمشاركة في العملية الانتخابية.
-            </p>
+            <h3>
+                اختر الخطة التي تناسب احتياجاتك للمشاركة في العملية الانتخابية
+            </h3>
         </div>
         <div class="pricing-row">
             <div class="pricing_design">
                 <div class="single-pricing">
                     <div class="price-head text-center">
-                        <h2>مجانية</h2>
-                        <h1>0 دينار</h1>
+                        <h1><img src="~/Content/images/product/Screenshot_2024-08-21_100627.png" alt="خطة مجانية" class="price-image" /></h1>
                     </div>
                     <ul>
                         <li><span style="color: green;">&#10004;</span> <b>تطبيق مجاني</b> للمناظرة</li>
@@ -24,7 +42,7 @@
                         <li><span style="color: green;">&#10004;</span> توفير رابط Zoom لكل مناظرة</li>
                         <li><span style="color: green;">&#10004;</span> جدولة مرنة للمناظرات</li>
                         <li><span style="color: green;">&#10004;</span> رسائل البريد الإلكتروني لإشعار المشاركين في المناظرة</li>
-                    </ul>
+                    </ul><br />
                     <div class="pricing-price"></div>
                     @Html.ActionLink("اطلب الآن", "Index", "Debates", new { plan = "Free", amount = 0 }, new { @class = "price_btn" })
                 </div>
@@ -33,8 +51,7 @@
             <div class="pricing_design">
                 <div class="single-pricing">
                     <div class="price-head text-center">
-                        <h2>عادية</h2>
-                        <h1 class="price">30 دينار</h1>
+                        <h1><img src="~/Content/images/product/Screenshot_2024-08-21_100749.png" alt="خطة عادية" class="price-image" /></h1>
                     </div>
                     <ul>
                         <li><span style="color: green;">&#10004;</span> حملات إعلانية</li>
@@ -51,9 +68,7 @@
             <div class="pricing_design">
                 <div class="single-pricing">
                     <div class="price-head text-center">
-                        <h2>
-                            متميزة</h1>
-                            <h1 class="price">60 دينار</h1>
+                        <h1><img src="~/Content/images/product/Screenshot_2024-08-21_100758.png" alt="خطة متميزة" class="price-image" /></h1>
                     </div>
                     <ul>
                         <li><span style="color: green;">&#10004;</span> حملات إعلانية</li>
@@ -119,6 +134,11 @@
         font-weight: 600;
         margin-top: 20px;
         margin-bottom: 5px;
+    }
+
+    .price-image {
+        max-width: 208px;
+        height: auto;
     }
 
     .single-pricing ul {

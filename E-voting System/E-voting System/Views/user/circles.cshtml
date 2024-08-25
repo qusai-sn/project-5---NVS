@@ -2,20 +2,49 @@
 
 @{
     ViewBag.Title = "الدوائر الانتخابية";
+
     var circleTitles = new Dictionary<int, string>
 {
         { 1, "دائرة اربد الاولى" },
         { 2, "دائرة اربد الثانية" },
         { 3, "دائرة جرش" },
-        { 4, "دائرة عجلون" }
+        { 4, "دائرة عجلون" },
+        { 5, "دائرة عمان الاولى" },
+        { 6, "دائرة عمان الثانية" },
+        { 7, "دائرة عمان الثالثة" },
+        { 8, "دائرة عمان الرابعة" },
+        { 9, "دائرة الزرقاء الاولى" },
+        { 10, "دائرة الزرقاء الثانية" },
+        { 11, "دائرة معان" },
+        { 12, "دائرة الطفيلة" },
+        { 13, "دائرة الكرك" },
+        { 14, "دائرة البلقاء" },
+        { 15, "دائرة مادبا" },
+        { 16, "دائرة العقبة" },
+        { 17, "دائرة المفرق" },
+        { 18, "دائرة البادية الشمالية" }
     };
 
     var circleImages = new Dictionary<int, string>
 {
-        { 1, "~/Content/assets/images/irbidOne.jpg" }, // Replace with actual image paths
+        { 1, "~/Content/assets/images/irbidOne.jpg" },
         { 2, "~/Content/assets/images/irbidTwo.jpg" },
         { 3, "~/Content/assets/images/jarash.jpg" },
-        { 4, "~/Content/assets/images/ajloon.jpg" }
+        { 4, "~/Content/assets/images/ajloon.jpg" },
+        { 5, "~/Content/assets/images/ammanOne.jpg" },
+        { 6, "~/Content/assets/images/ammanTwo.jpg" },
+        { 7, "~/Content/assets/images/ammanThree.jpg" },
+        { 8, "~/Content/assets/images/ammanFour.jpg" },
+        { 9, "~/Content/assets/images/zarqaOne.jpg" },
+        { 10, "~/Content/assets/images/zarqaTwo.jpg" },
+        { 11, "~/Content/assets/images/maan.jpg" },
+        { 12, "~/Content/assets/images/tafila.jpg" },
+        { 13, "~/Content/assets/images/karak.jpg" },
+        { 14, "~/Content/assets/images/balqa.jpg" },
+        { 15, "~/Content/assets/images/madaba.jpg" },
+        { 16, "~/Content/assets/images/aqaba.jpg" },
+        { 17, "~/Content/assets/images/mafraq.jpg" },
+        { 18, "~/Content/assets/images/badiaNorth.jpg" }
     };
 }
 
@@ -26,6 +55,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
+
+
         .active-circle {
             border: 2px solid green;
             pointer-events: auto;
@@ -45,8 +76,8 @@
             cursor: pointer;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-            width: 900px; /* Fixed width for cards */
+            margin-bottom: 30px; /* Space between cards */
+            width: 100%; /* Full width within the column */
             height: auto;
         }
 
@@ -56,7 +87,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px; /* Increased width to accommodate 3 cards per row */
             margin: auto;
             margin-top: 2rem; /* Add margin-top for space below navbar */
         }
@@ -70,40 +101,83 @@
         }
 
         .card img {
-            max-width: 100%; /* Make the image fill the card width */
-            height: auto;
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Ensures the image covers the area */
             margin-bottom: 10px; /* Add some space below the image */
             border-radius: 10px;
+        }
+
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .line {
+            border-bottom: 3px solid red;
+            margin-top: 3px;
+            width: 70%;
+        }
+
+        .line2 {
+            border-bottom: 3px solid darkgreen;
+            margin-top: 3px;
+            width: 60%;
         }
     </style>
 </head>
 <body>
     <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
         <div class="container">
-            <h2 class="title">الدوائر الانتخابية</h2>
-            <div class="card shadow-lg p-4 p-lg-5" style="border-radius: 10px;">
-                <div class="card-body">
-                    <div class="row">
-                        @foreach (var circle in Model.Circles)
-                        {
-                            var isActive = circle == Model.ActiveCircleId;
-                            var title = circleTitles.ContainsKey(circle) ? circleTitles[circle] : $"الدائرة {circle}";
-                            var imageUrl = circleImages.ContainsKey(circle) ? circleImages[circle] : "~/Content/assets/images/default.jpg"; // Default image if not found
-                            <div class="col-md-6 mb-4 d-flex justify-content-center">
-                                <div class="card @(isActive ? "active-circle" : "inactive-circle")">
-                                    <div class="card-body">
-                                        <img src="@Url.Content(imageUrl)" alt="@title" />
-                                        <h5 class="card-title">@title</h5>
-                                        @if (isActive)
-                                        {
-                                            <a href="@Url.Action("LocalList", "user", new { circleId = circle })" class="btn btn-primary">اذهب إلى القائمة المحلية</a>
-                                        }
-                                    </div>
-                                </div>
+            <center>
+                <h1>الدوائر الانتخابية</h1><center><div class="line2"></div><div class="line"></div></center>
+            </center>
+            <br />
+            <!-- First 3 Circles -->
+            <div class="row">
+                @foreach (var circle in Model.Circles.Take(3))
+                {
+                    var isActive = circle == Model.ActiveCircleId;
+                    var title = circleTitles.ContainsKey(circle) ? circleTitles[circle] : $"الدائرة {circle}";
+                    var imageUrl = circleImages.ContainsKey(circle) ? circleImages[circle] : "~/Content/assets/images/default.jpg"; // Default image if not found
+                    <div class="col-md-4 mb-4 d-flex justify-content-center">
+                        <div class="card @(isActive ? "active-circle" : "inactive-circle")">
+                            <div class="card-body">
+                                <img src="@Url.Content(imageUrl)" alt="@title" />
+                                <h5 class="card-title">@title</h5>
+                                @if (isActive)
+                                {
+                                    <a href="@Url.Action("LocalList", "user", new { circleId = circle })" class="btn btn-primary">اذهب إلى القائمة المحلية</a>
+                                }
                             </div>
-                        }
+                        </div>
                     </div>
-                </div>
+                }
+            </div>
+
+            <!-- Static Rest of the Circles -->
+            <div class="row">
+                @for (int i = 4; i <= 18; i++)
+                {
+                    var title = circleTitles.ContainsKey(i) ? circleTitles[i] : $"الدائرة {i}";
+                    var imageUrl = circleImages.ContainsKey(i) ? circleImages[i] : "~/Content/assets/images/default.jpg"; // Default image if not found
+                    <div class="col-md-4 mb-4 d-flex justify-content-center">
+                        <div class="card inactive-circle">
+                            <div class="card-body">
+                                <img src="@Url.Content(imageUrl)" alt="@title" />
+                                <h5 class="card-title">@title</h5>
+                                @if (i == Model.ActiveCircleId)
+                                {
+                                    <a href="@Url.Action("LocalList", "user", new { circleId = i })" style=" font-family: 'Cairo', sans-serif !important; background-color:#d24e4e">
+                                        <span style=" font-family: 'Cairo', sans-serif !important;">
+                                            اذهب إلى القائمة المحلية
+                                        </span>
+
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     </div>

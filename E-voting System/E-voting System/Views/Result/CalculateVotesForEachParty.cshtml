@@ -38,34 +38,68 @@
     <p><strong>Total Participants:</strong> @totalParticipants</p>
     <p><strong>Total White Party Votes:</strong> @totalWhitePartyVotes</p>
 
-    <!-- Display party seats and candidates in cards -->
-    <h2>Party Seats and Candidates</h2>
-    <div class="row">
-        @foreach (var partyName in partySeats.Keys)
-        {
-            var seatCount = partySeats[partyName];
-            var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
-
-            if (candidates.Any())
+    <!-- General Statistics Table -->
+    <table class="table table-striped">
+        <thead style="background-color: #002d72; color: #fff;">
+            <tr>
+                <th>Party</th>
+                <th>Seats Won</th>
+                <th>Candidates</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var partyName in partySeats.Keys)
             {
-                <div class="col-md-4">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h3 class="card-title">@partyName</h3>
-                            <p><strong>Seats:</strong> @seatCount</p>
-                            <p><strong>Candidates:</strong></p>
-                            <ul>
-                                @foreach (var candidate in candidates)
-                                {
-                                    <li>@candidate</li>
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                var seatCount = partySeats[partyName];
+                var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
+
+                <tr>
+                    <td>@partyName</td>
+                    <td>@seatCount</td>
+                    <td>
+                        <ul>
+                            @foreach (var candidate in candidates)
+                            {
+                                <li>@candidate</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
             }
-        }
-    </div>
+        </tbody>
+    </table>
+
+    <!-- Winning Candidates Table -->
+    <h2>Winning Candidates</h2>
+    <table class="table table-striped">
+        <thead style="background-color: #002d72; color: #fff;">
+            <tr>
+                <th>Party</th>
+                <th>Seats Won</th>
+                <th>Winning Candidates</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var partyName in partySeats.Keys)
+            {
+                var seatCount = partySeats[partyName];
+                var candidates = partyCandidates.ContainsKey(partyName) ? partyCandidates[partyName] : new List<string>();
+
+                <tr>
+                    <td>@partyName</td>
+                    <td>@seatCount</td>
+                    <td>
+                        <ul class="list-unstyled mb-0">
+                            @foreach (var candidate in candidates)
+                            {
+                                <li>@candidate</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
 <style>
@@ -74,12 +108,12 @@
         background-color: #f8f9fa;
     }
 
-    h1 {
+    h1, h2, h3, h5 {
         color: #333;
+        margin-bottom: 20px;
     }
 
     h2 {
-        color: #444;
         border-bottom: 2px solid #002d72;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -94,36 +128,25 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .card {
-        border: 1px solid #ddd;
-        border-radius: 10px;
+    .table {
+        margin-top: 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        margin-bottom: 20px;
-        transition: transform 0.3s;
+        border-radius: 7px;
     }
 
-        .card:hover {
-            transform: translateY(-10px);
+        .table th, .table td {
+            vertical-align: middle;
         }
 
-    .card-title {
-        font-size: 18px;
-        color: #002d72;
+    .list-unstyled {
+        padding-left: 0;
+        list-style: none;
     }
 
-    .card p, .card ul li {
-        margin: 5px 0;
-        font-size: 16px;
-    }
-
-    .card ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-        .card ul li {
+        .list-unstyled li {
             padding: 5px 0;
-            border-bottom: 1px solid #ddd;
         }
 </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

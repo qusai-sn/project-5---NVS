@@ -1,31 +1,84 @@
-﻿
-@model IEnumerable<E_voting_System.Models.Debate>
-@{ 
+﻿@model IEnumerable<E_voting_System.Models.Debate>
+
+@{
     ViewBag.Title = "IndexDebatesHome";
 }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cairo', sans-serif;
+    }
 
-<h3 class="text-center my-4" ;"> موعد المناظرات</h3>
+    .line {
+        border-bottom: 3px solid red;
+        margin-top: 3px;
+        width: 70%;
+    }
 
-@*<p class="text-center">
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
-</p>*@
+    .line2 {
+        border-bottom: 3px solid darkgreen;
+        margin-top: 3px;
+        width: 60%;
+    }
+
+    /* Style to control the size of the images */
+    .small-image {
+        width: 80px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+        vertical-align: middle; /* Align with the text */
+        margin: 0 10px; /* Add some space around the image */
+    }
+
+    .heading-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+</style>
+
+<div class="heading-container">
+    <img src="~/Content/images/product/Screenshot_2024-08-21_142513.png" class="small-image" />
+    <h2 class="d-inline-block">موعد المناظرات</h2>
+    <img src="~/Content/images/product/Screenshot_2024-08-21_142513.png" class="small-image" />
+</div><center><div class="line2"></div><div class="line"></div></center>
+<br />
 
 <div class="container">
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" style="background-color:whitesmoke;">
                     <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Date_Of_Debate)</h5>
-                        <p class="card-text"><strong> عنوان المناظرة : </strong> @Html.DisplayFor(modelItem => item.Topic)</p>
-                        <p class="card-text"><strong> المرشح الأول : </strong> @Html.DisplayFor(modelItem => item.First_Candidate)</p>
-                        <p class="card-text"><strong> رقم قائمة المرشح الأول : </strong> @Html.DisplayFor(modelItem => item.First_Candidate_List)</p>
-                        <p class="card-text"><strong> المرشح الثاني : </strong> @Html.DisplayFor(modelItem => item.Second_Candidate)</p>
-                        <p class="card-text"><strong> رقم قائمة المرشح الثاني : </strong> @Html.DisplayFor(modelItem => item.Second_Candidate_List)</p>
-                        <p class="card-text">
-                            <strong>Zoom Link:</strong>
-                            <a href="@item.Zoom_link" target="_blank">
+                        <div class="widget-49-date-primary" style="color:black;">
+                            @if (item.Date_Of_Debate != null)
+                            {
+                                var date = item.Date_Of_Debate.Value;
+                                <div class="widget-49-date-day">
+                                    @date.ToString("dd")
+                                </div>
+                                <div class="widget-49-date-month">
+                                    @date.ToString("MMMM")
+                                </div>
+                            }
+
+                        </div>
+
+                        <p class="card-text" style="color:red; font-size: 2.5rem;">
+                            <b> @Html.DisplayFor(modelItem => item.Topic)</b>
+                        </p>
+                        <h5 class="card-title" style="color:black;">
+                            @if (item.Date_Of_Debate.HasValue)
+                            {
+                                @item.Date_Of_Debate.Value.ToString("dd MMMM yyyy")
+                            }
+                        </h5>
+                        <p class="card-text" style="color:black;"><strong>   المرشح الأول     :              </strong>  @Html.DisplayFor(modelItem => item.First_Candidate)</p>
+                        <p class="card-text" style="color:black;"><strong>رقم قائمة المرشح الأول    :         </strong> @Html.DisplayFor(modelItem => item.First_Candidate_List)</p>
+                        <p class="card-text" style="color:black;"><strong> المرشح الثاني    :            </strong> @Html.DisplayFor(modelItem => item.Second_Candidate)</p>
+                        <p class="card-text" style="color:black;"><strong>رقم قائمة المرشح الثاني    :            </strong> @Html.DisplayFor(modelItem => item.Second_Candidate_List)</p>
+                        <p class="card-text" style="color: black;">
+                            <strong>رابط مُشاهدة المناظرة  :      </strong>
+                            <a style="text-decoration: none; " href="@item.Zoom_link" target="_blank">
                                 @item.Zoom_link
                             </a>
                         </p>
@@ -35,3 +88,101 @@
         }
     </div>
 </div>
+
+<style>
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-text {
+        margin-bottom: 0.5rem;
+    }
+
+    .widget-49-date-primary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .widget-49-date-day {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .widget-49-date-month {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .my-4 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .container {
+        max-width: 1140px; /* Adjust max-width as needed */
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-md-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+        .card:hover .card-body {
+            background-color: #f8f9fa;
+        }
+
+        .card:hover .card-title {
+            color: darkred;
+        }
+
+        .card:hover .widget-49-date-day,
+        .card:hover .widget-49-date-month {
+            color: darkgreen;
+        }
+
+    a:hover {
+        color: lightgreen;
+    }
+</style>
